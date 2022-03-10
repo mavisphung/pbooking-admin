@@ -29,6 +29,11 @@
       href="../assets/extra-libs/multicheck/multicheck.css"
     />
     <link
+      rel="stylesheet"
+      type="text/css"
+      href="../assets/libs/select2/dist/css/select2.min.css"
+    />
+    <link
       href="../assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.css"
       rel="stylesheet"
     />
@@ -78,10 +83,10 @@
                 <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
                 <!-- Dark Logo icon -->
                 <img
-                  src="../assets/images/logo-icon.png"
+                  src="../assets/images/logo-linslus.png"
                   alt="homepage"
                   class="light-logo"
-                  width="25"
+                  width="30"
                 />
               </b>
               <!--End Logo icon -->
@@ -360,7 +365,7 @@
                   href="customers.html"
                   aria-expanded="false"
                   ><i class="mdi mdi-account"></i
-                  ><span class="hide-menu">Users</span></a
+                  ><span class="hide-menu">Customers</span></a
                 >
               </li>
               <li class="sidebar-item">
@@ -378,7 +383,7 @@
                   href="photographers.html"
                   aria-expanded="false"
                 >
-                  <i class="mdi mdi-format-align-justify"></i>
+                  <i class="fas fa-address-book"></i>
                   <span class="hide-menu">Photographers</span>
                 </a>
               </li>
@@ -388,7 +393,7 @@
                   href="reservations.html"
                   aria-expanded="false"
                 >
-                  <i class="mdi mdi-format-align-justify"></i>
+                  <i class="fas fa-calendar-alt"></i>
                   <span class="hide-menu">Reservations</span>
                 </a>
               </li>
@@ -416,7 +421,208 @@
                 <nav aria-label="breadcrumb">
                   <ul class="nav">
                     <li class="nav-item">
-                      <a href="#" class="btn btn-primary">Add customer</a>
+                      <!-- <a href="#" class="btn btn-primary">Add customer</a> -->
+                      <!-- Button trigger modal -->
+                      <button
+                        type="button"
+                        class="btn btn-primary"
+                        data-bs-toggle="modal"
+                        data-bs-target="#customerModal"
+                      >
+                        Add photographer
+                      </button>
+
+                      <!-- Modal -->
+                      <div
+                        class="modal fade"
+                        id="customerModal"
+                        tabindex="-1"
+                        aria-labelledby="exampleModalLabel"
+                        aria-hidden="true"
+                      >
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">
+                                Add a new photographer
+                              </h5>
+                              <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"
+                              ></button>
+                            </div>
+                            <div class="modal-body">
+                              <form class="form-horizontal">
+                                <div class="card-body">
+                                  <h4 class="card-title"></h4>
+                                  <div class="form-group row">
+                                    <label
+                                      for="fname"
+                                      class="col-sm-3 text-end control-label col-form-label"
+                                    >
+                                      First Name
+                                    </label>
+                                    <div class="col-sm-9">
+                                      <input
+                                        type="text"
+                                        class="form-control"
+                                        id="fname"
+                                        placeholder="First Name Here"
+                                      />
+                                    </div>
+                                  </div>
+                                  <div class="form-group row">
+                                    <label
+                                      for="lname"
+                                      class="col-sm-3 text-end control-label col-form-label"
+                                    >
+                                      Last Name
+                                    </label>
+                                    <div class="col-sm-9">
+                                      <input
+                                        type="text"
+                                        class="form-control"
+                                        id="lname"
+                                        placeholder="Last Name Here"
+                                      />
+                                    </div>
+                                  </div>
+                                  <div class="form-group row">
+                                    <label
+                                      for="lname"
+                                      class="col-sm-3 text-end control-label col-form-label"
+                                    >
+                                      Username
+                                    </label>
+                                    <div class="col-sm-9">
+                                      <input
+                                        type="text"
+                                        class="form-control"
+                                        id="lname"
+                                        placeholder="Username here"
+                                      />
+                                    </div>
+                                  </div>
+                                  <div class="form-group row">
+                                    <label
+                                      for="lname"
+                                      class="col-sm-3 text-end control-label col-form-label"
+                                    >
+                                      Password
+                                    </label>
+                                    <div class="col-sm-9">
+                                      <input
+                                        type="password"
+                                        class="form-control"
+                                        id="lname"
+                                        placeholder="Password Here"
+                                      />
+                                    </div>
+                                  </div>
+                                  <div class="form-group row">
+                                    <label
+                                      for="email1"
+                                      class="col-sm-3 text-end control-label col-form-label"
+                                    >
+                                      Email
+                                    </label>
+                                    <div class="col-sm-9">
+                                      <input
+                                        type="text"
+                                        class="form-control"
+                                        id="email1"
+                                        placeholder="Email Here"
+                                      />
+                                    </div>
+                                  </div>
+                                  <div class="form-group row">
+                                    <label
+                                      for="cono1"
+                                      class="col-sm-3 text-end control-label col-form-label"
+                                    >
+                                      Contact No
+                                    </label>
+                                    <div class="col-sm-9">
+                                      <input
+                                        type="text"
+                                        class="form-control"
+                                        id="cono1"
+                                        placeholder="Contact No Here"
+                                      />
+                                    </div>
+                                  </div>
+                                  <div class="form-group row">
+                                    <label
+                                      for="cono1"
+                                      class="col-sm-3 text-end control-label col-form-label"
+                                    >
+                                      Address
+                                    </label>
+                                    <div class="col-sm-9">
+                                      <input
+                                        type="text"
+                                        class="form-control"
+                                        id="cono1"
+                                        placeholder="Address Here"
+                                      />
+                                    </div>
+                                  </div>
+                                  <div class="form-group row">
+                                    <label class="col-md-3 mt-3"
+                                      >Services</label
+                                    >
+                                    <div class="col-md-9">
+                                      <select
+                                        class="select2 form-select shadow-none mt-3"
+                                        multiple="multiple"
+                                        style="height: 36px; width: 100%"
+                                      >
+                                        <option disabled>Choose services</option>
+                                        <option value="1">Wedding</option>
+                                        <option value="2">Portrait</option>
+                                        <option value="3">Fashion</option>
+                                        <option value="4">Outdoor</option>
+                                        <option value="5">Landscape</option>
+                                        <option value="6">Solo</option>
+                                        <option value="7">Collective</option>
+                                        <option value="8">
+                                          Exclusive Short Film
+                                        </option>
+                                        <option value="9">Baby / Family</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                  <div class="form-group row">
+                                    <label
+                                      for="cono1"
+                                      class="col-sm-3 text-end control-label col-form-label"
+                                    >
+                                      Message
+                                    </label>
+                                    <div class="col-sm-9">
+                                      <textarea class="form-control"></textarea>
+                                    </div>
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+                            <div class="modal-footer">
+                              <button
+                                type="button"
+                                class="btn btn-secondary"
+                                data-bs-dismiss="modal"
+                              >
+                                Close
+                              </button>
+                              <button type="button" class="btn btn-primary">
+                                Save changes
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </li>
                     <li class="nav-item">
                       <a href="#" class="btn btn-danger"
@@ -2743,11 +2949,14 @@
     <script src="../assets/extra-libs/multicheck/datatable-checkbox-init.js"></script>
     <script src="../assets/extra-libs/multicheck/jquery.multicheck.js"></script>
     <script src="../assets/extra-libs/DataTables/datatables.min.js"></script>
+    <script src="../assets/libs/select2/dist/js/select2.full.min.js"></script>
+    <script src="../assets/libs/select2/dist/js/select2.min.js"></script>
     <script>
       /****************************************
        *       Basic Table                   *
        ****************************************/
       $('#zero_config').DataTable();
+      $('.select2').select2();
     </script>
   </body>
 </html>

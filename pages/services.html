@@ -78,10 +78,10 @@
                 <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
                 <!-- Dark Logo icon -->
                 <img
-                  src="../assets/images/logo-icon.png"
+                  src="../assets/images/logo-linslus.png"
                   alt="homepage"
                   class="light-logo"
-                  width="25"
+                  width="30"
                 />
               </b>
               <!--End Logo icon -->
@@ -360,7 +360,7 @@
                   href="customers.html"
                   aria-expanded="false"
                   ><i class="mdi mdi-account"></i
-                  ><span class="hide-menu">Users</span></a
+                  ><span class="hide-menu">Customers</span></a
                 >
               </li>
               <li class="sidebar-item">
@@ -378,7 +378,7 @@
                   href="photographers.html"
                   aria-expanded="false"
                 >
-                  <i class="mdi mdi-format-align-justify"></i>
+                  <i class="fas fa-address-book"></i>
                   <span class="hide-menu">Photographers</span>
                 </a>
               </li>
@@ -388,7 +388,7 @@
                   href="reservations.html"
                   aria-expanded="false"
                 >
-                  <i class="mdi mdi-format-align-justify"></i>
+                  <i class="fas fa-calendar-alt"></i>
                   <span class="hide-menu">Reservations</span>
                 </a>
               </li>
@@ -416,7 +416,347 @@
                 <nav aria-label="breadcrumb">
                   <ul class="nav">
                     <li class="nav-item">
-                      <a href="#" class="btn btn-primary">Add service</a>
+                      <!-- <a href="#" class="btn btn-primary">Add service</a> -->
+                      <!-- Button trigger modal -->
+                      <button
+                        type="button"
+                        class="btn btn-primary"
+                        data-bs-toggle="modal"
+                        data-bs-target="#customerModal"
+                      >
+                        Add service
+                      </button>
+
+                      <!-- Modal -->
+                      <div
+                        class="modal fade"
+                        id="customerModal"
+                        tabindex="-1"
+                        aria-labelledby="exampleModalLabel"
+                        aria-hidden="true"
+                      >
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">
+                                Add a new service
+                              </h5>
+                              <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"
+                              ></button>
+                            </div>
+                            <div class="modal-body">
+                              <form class="form-horizontal">
+                                <div class="card-body">
+                                  <h4 class="card-title"></h4>
+                                  <div class="form-group row">
+                                    <label
+                                      for="fname"
+                                      class="col-sm-3 text-end control-label col-form-label"
+                                    >
+                                      Service name
+                                    </label>
+                                    <div class="col-sm-9">
+                                      <input
+                                        type="text"
+                                        class="form-control"
+                                        id="fname"
+                                        placeholder="Service Name Here"
+                                      />
+                                    </div>
+                                  </div>
+                                  <div class="form-group row">
+                                    <label
+                                      for="price"
+                                      class="col-sm-3 text-end control-label col-form-label"
+                                    >
+                                      Price
+                                    </label>
+                                    <div class="col-sm-9">
+                                      <input
+                                        type="number"
+                                        class="form-control"
+                                        id="price"
+                                        placeholder="Price Here"
+                                      />
+                                    </div>
+                                  </div>
+                                  <div class="form-group row">
+                                    <label
+                                      for="unit"
+                                      class="col-sm-3 text-end control-label col-form-label"
+                                    >
+                                      Unit
+                                    </label>
+                                    <div class="col-sm-9">
+                                      <select
+                                        class="form-select"
+                                        aria-label="Default select example"
+                                        id="unit"
+                                      >
+                                        <option selected disabled>
+                                          Type of unit
+                                        </option>
+                                        <option value="1">Album</option>
+                                        <option value="2">Hour</option>
+                                        <option value="3">Picture</option>
+                                        <option value="4">Clip</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                  <div class="form-group row">
+                                    <label
+                                      for="cono1"
+                                      class="col-sm-3 text-end control-label col-form-label"
+                                    >
+                                      Description
+                                    </label>
+                                    <div class="col-sm-9">
+                                      <textarea class="form-control"></textarea>
+                                    </div>
+                                  </div>
+                                  <div class="form-group row">
+                                    <label
+                                      for="photographer"
+                                      class="col-sm-3 text-end control-label col-form-label"
+                                    >
+                                      Photographer
+                                    </label>
+                                    <div class="col-sm-9">
+                                      <select
+                                        class="form-select"
+                                        aria-label="Default select example"
+                                        id="photographer"
+                                      >
+                                        <option selected disabled>
+                                          Choose a photographer
+                                        </option>
+                                        <option value="0">Bevis Bernard</option>
+                                        <option value="1">Kamal Mcgee</option>
+                                        <option value="2">
+                                          Preston Buckley
+                                        </option>
+                                        <option value="3">Orlando Poole</option>
+                                        <option value="4">Justina King</option>
+                                        <option value="5">
+                                          Cynthia Joseph
+                                        </option>
+                                        <option value="6">Steel Sawyer</option>
+                                        <option value="7">Sawyer Berg</option>
+                                        <option value="8">Heather Sweet</option>
+                                        <option value="9">
+                                          Kimberley Ryan
+                                        </option>
+                                        <option value="10">
+                                          Randall Aguirre
+                                        </option>
+                                        <option value="11">
+                                          Genevieve Flynn
+                                        </option>
+                                        <option value="12">Paula Wise</option>
+                                        <option value="13">
+                                          Pandora Downs
+                                        </option>
+                                        <option value="14">Chase Long</option>
+                                        <option value="15">Olga Farrell</option>
+                                        <option value="16">
+                                          Preston Cohen
+                                        </option>
+                                        <option value="17">
+                                          Salvador Gallagher
+                                        </option>
+                                        <option value="18">Noel Dodson</option>
+                                        <option value="19">Ulysses Kent</option>
+                                        <option value="20">
+                                          Elton Richard
+                                        </option>
+                                        <option value="21">
+                                          Chastity Flynn
+                                        </option>
+                                        <option value="22">Emi Cardenas</option>
+                                        <option value="23">
+                                          Hashim Hensley
+                                        </option>
+                                        <option value="24">Lana Lamb</option>
+                                        <option value="25">
+                                          Tatyana Frederick
+                                        </option>
+                                        <option value="26">Myles Adkins</option>
+                                        <option value="27">
+                                          Gavin Chambers
+                                        </option>
+                                        <option value="28">
+                                          Daquan Patton
+                                        </option>
+                                        <option value="29">Abdul Farmer</option>
+                                        <option value="30">
+                                          Laura Chapman
+                                        </option>
+                                        <option value="31">
+                                          Holly Puckett
+                                        </option>
+                                        <option value="32">Brynn Barton</option>
+                                        <option value="33">Susan Little</option>
+                                        <option value="34">
+                                          Alfreda Kaufman
+                                        </option>
+                                        <option value="35">Oleg Wise</option>
+                                        <option value="36">Megan Mooney</option>
+                                        <option value="37">Aurelia Bell</option>
+                                        <option value="38">Duncan Odom</option>
+                                        <option value="39">
+                                          Mira Melendez
+                                        </option>
+                                        <option value="40">
+                                          Colin Delacruz
+                                        </option>
+                                        <option value="41">
+                                          Beatrice Hendrix
+                                        </option>
+                                        <option value="42">
+                                          Chastity Foley
+                                        </option>
+                                        <option value="43">Olga Andrews</option>
+                                        <option value="44">Otto Barnes</option>
+                                        <option value="45">Galena Burch</option>
+                                        <option value="46">
+                                          Ignatius Washington
+                                        </option>
+                                        <option value="47">Kadeem Key</option>
+                                        <option value="48">Paul Norton</option>
+                                        <option value="49">Dalton Boyle</option>
+                                        <option value="50">
+                                          Melyssa Lindsay
+                                        </option>
+                                        <option value="51">
+                                          Britanni Talley
+                                        </option>
+                                        <option value="52">Orson Mcleod</option>
+                                        <option value="53">
+                                          Adele Jacobson
+                                        </option>
+                                        <option value="54">
+                                          Finn Montgomery
+                                        </option>
+                                        <option value="55">
+                                          Abraham Roman
+                                        </option>
+                                        <option value="56">
+                                          Michael Alston
+                                        </option>
+                                        <option value="57">
+                                          Kaseem Barrett
+                                        </option>
+                                        <option value="58">Vance Burch</option>
+                                        <option value="59">Olga Snider</option>
+                                        <option value="60">Mira Fields</option>
+                                        <option value="61">
+                                          Wyoming Willis
+                                        </option>
+                                        <option value="62">Marvin Carr</option>
+                                        <option value="63">May Allison</option>
+                                        <option value="64">
+                                          Nehru Bartlett
+                                        </option>
+                                        <option value="65">Jonas Roth</option>
+                                        <option value="66">
+                                          Kelsie Medina
+                                        </option>
+                                        <option value="67">
+                                          Jameson Cochran
+                                        </option>
+                                        <option value="68">
+                                          Breanna Shepard
+                                        </option>
+                                        <option value="69">
+                                          Kristen Lowery
+                                        </option>
+                                        <option value="70">
+                                          Dennis Christensen
+                                        </option>
+                                        <option value="71">
+                                          Hakeem Hampton
+                                        </option>
+                                        <option value="72">Melvin Bowen</option>
+                                        <option value="73">
+                                          Sopoline Rosario
+                                        </option>
+                                        <option value="74">Oscar Jones</option>
+                                        <option value="75">
+                                          Sopoline Powers
+                                        </option>
+                                        <option value="76">
+                                          Gabriel Lambert
+                                        </option>
+                                        <option value="77">
+                                          Hilel Bartlett
+                                        </option>
+                                        <option value="78">
+                                          Felicia Clarke
+                                        </option>
+                                        <option value="79">
+                                          Garrett Blake
+                                        </option>
+                                        <option value="80">
+                                          Hashim Ramirez
+                                        </option>
+                                        <option value="81">
+                                          Erasmus Sheppard
+                                        </option>
+                                        <option value="82">
+                                          Uriel Mathews
+                                        </option>
+                                        <option value="83">Conan Bailey</option>
+                                        <option value="84">Palmer Frost</option>
+                                        <option value="85">
+                                          Byron Schultz
+                                        </option>
+                                        <option value="86">Oliver Gray</option>
+                                        <option value="87">
+                                          Curran Everett
+                                        </option>
+                                        <option value="88">Leroy Reese</option>
+                                        <option value="89">
+                                          Mia Stephenson
+                                        </option>
+                                        <option value="90">Tanisha Koch</option>
+                                        <option value="91">Xander James</option>
+                                        <option value="92">Quinlan Vang</option>
+                                        <option value="93">Gil Wells</option>
+                                        <option value="94">Sharon Short</option>
+                                        <option value="95">Sydney Huber</option>
+                                        <option value="96">Rowan White</option>
+                                        <option value="97">
+                                          Tyrone Holloway
+                                        </option>
+                                        <option value="98">Dai Rosario</option>
+                                        <option value="99">
+                                          Jason Mckinney
+                                        </option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+                            <div class="modal-footer">
+                              <button
+                                type="button"
+                                class="btn btn-secondary"
+                                data-bs-dismiss="modal"
+                              >
+                                Close
+                              </button>
+                              <button type="button" class="btn btn-primary">
+                                Save changes
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </li>
                     <li class="nav-item">
                       <a href="#" class="btn btn-danger">
@@ -575,6 +915,66 @@
                           <td>Solo</td>
                           <td>$ 159.99</td>
                           <td>Album</td>
+                          <td>
+                            <button class="btn btn-info">
+                              <i class="mdi mdi-details"></i>
+                            </button>
+                            <button class="btn btn-warning">
+                              <i class="mdi mdi-lock-open"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <!-- Row data-->
+                        <tr>
+                          <th>
+                            <label class="customcheckbox mb-3">
+                              <input type="checkbox" id="mainCheckbox" />
+                              <span class="checkmark"></span>
+                            </label>
+                          </th>
+                          <td>Collective</td>
+                          <td>$ 489.99</td>
+                          <td>Album</td>
+                          <td>
+                            <button class="btn btn-info">
+                              <i class="mdi mdi-details"></i>
+                            </button>
+                            <button class="btn btn-warning">
+                              <i class="mdi mdi-lock-open"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <!-- Row data-->
+                        <tr>
+                          <th>
+                            <label class="customcheckbox mb-3">
+                              <input type="checkbox" id="mainCheckbox" />
+                              <span class="checkmark"></span>
+                            </label>
+                          </th>
+                          <td>Exclusive Short Film</td>
+                          <td>$ 699.99</td>
+                          <td>Clip</td>
+                          <td>
+                            <button class="btn btn-info">
+                              <i class="mdi mdi-details"></i>
+                            </button>
+                            <button class="btn btn-warning">
+                              <i class="mdi mdi-lock-open"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <!-- Row data-->
+                        <tr>
+                          <th>
+                            <label class="customcheckbox mb-3">
+                              <input type="checkbox" id="mainCheckbox" />
+                              <span class="checkmark"></span>
+                            </label>
+                          </th>
+                          <td>Baby / Family</td>
+                          <td>$ 99.00</td>
+                          <td>ALbum</td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
