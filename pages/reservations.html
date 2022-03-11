@@ -29,6 +29,11 @@
       href="../assets/extra-libs/multicheck/multicheck.css"
     />
     <link
+      rel="stylesheet"
+      type="text/css"
+      href="../assets/libs/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css"
+    />
+    <link
       href="../assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.css"
       rel="stylesheet"
     />
@@ -416,7 +421,543 @@
                 <nav aria-label="breadcrumb">
                   <ul class="nav">
                     <li class="nav-item">
-                      <a href="#" class="btn btn-primary">Add reservation</a>
+                      <!-- <a href="#" class="btn btn-primary">Add reservation</a> -->
+                      <button
+                        type="button"
+                        class="btn btn-primary"
+                        data-bs-toggle="modal"
+                        data-bs-target="#customerModal"
+                      >
+                        Add reservation
+                      </button>
+
+                      <!-- Modal -->
+                      <div
+                        class="modal fade"
+                        id="customerModal"
+                        tabindex="-1"
+                        aria-labelledby="exampleModalLabel"
+                        aria-hidden="true"
+                      >
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">
+                                Add a new reservation
+                              </h5>
+                              <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"
+                              ></button>
+                            </div>
+                            <div class="modal-body">
+                              <form class="form-horizontal">
+                                <div class="card-body">
+                                  <h4 class="card-title"></h4>
+                                  <!-- Photographers -->
+                                  <div class="form-group row">
+                                    <label class="col-md-3 mt-2"
+                                      >Photographer</label
+                                    >
+                                    <div class="col-md-9">
+                                      <select
+                                        class="form-select"
+                                        aria-label="Default select example"
+                                        id="photographer"
+                                      >
+                                        <option selected disabled>
+                                          Choose a photographer
+                                        </option>
+                                        <option value="0">Bevis Bernard</option>
+                                        <option value="1">Kamal Mcgee</option>
+                                        <option value="2">
+                                          Preston Buckley
+                                        </option>
+                                        <option value="3">Orlando Poole</option>
+                                        <option value="4">Justina King</option>
+                                        <option value="5">
+                                          Cynthia Joseph
+                                        </option>
+                                        <option value="6">Steel Sawyer</option>
+                                        <option value="7">Sawyer Berg</option>
+                                        <option value="8">Heather Sweet</option>
+                                        <option value="9">
+                                          Kimberley Ryan
+                                        </option>
+                                        <option value="10">
+                                          Randall Aguirre
+                                        </option>
+                                        <option value="11">
+                                          Genevieve Flynn
+                                        </option>
+                                        <option value="12">Paula Wise</option>
+                                        <option value="13">
+                                          Pandora Downs
+                                        </option>
+                                        <option value="14">Chase Long</option>
+                                        <option value="15">Olga Farrell</option>
+                                        <option value="16">
+                                          Preston Cohen
+                                        </option>
+                                        <option value="17">
+                                          Salvador Gallagher
+                                        </option>
+                                        <option value="18">Noel Dodson</option>
+                                        <option value="19">Ulysses Kent</option>
+                                        <option value="20">
+                                          Elton Richard
+                                        </option>
+                                        <option value="21">
+                                          Chastity Flynn
+                                        </option>
+                                        <option value="22">Emi Cardenas</option>
+                                        <option value="23">
+                                          Hashim Hensley
+                                        </option>
+                                        <option value="24">Lana Lamb</option>
+                                        <option value="25">
+                                          Tatyana Frederick
+                                        </option>
+                                        <option value="26">Myles Adkins</option>
+                                        <option value="27">
+                                          Gavin Chambers
+                                        </option>
+                                        <option value="28">
+                                          Daquan Patton
+                                        </option>
+                                        <option value="29">Abdul Farmer</option>
+                                        <option value="30">
+                                          Laura Chapman
+                                        </option>
+                                        <option value="31">
+                                          Holly Puckett
+                                        </option>
+                                        <option value="32">Brynn Barton</option>
+                                        <option value="33">Susan Little</option>
+                                        <option value="34">
+                                          Alfreda Kaufman
+                                        </option>
+                                        <option value="35">Oleg Wise</option>
+                                        <option value="36">Megan Mooney</option>
+                                        <option value="37">Aurelia Bell</option>
+                                        <option value="38">Duncan Odom</option>
+                                        <option value="39">
+                                          Mira Melendez
+                                        </option>
+                                        <option value="40">
+                                          Colin Delacruz
+                                        </option>
+                                        <option value="41">
+                                          Beatrice Hendrix
+                                        </option>
+                                        <option value="42">
+                                          Chastity Foley
+                                        </option>
+                                        <option value="43">Olga Andrews</option>
+                                        <option value="44">Otto Barnes</option>
+                                        <option value="45">Galena Burch</option>
+                                        <option value="46">
+                                          Ignatius Washington
+                                        </option>
+                                        <option value="47">Kadeem Key</option>
+                                        <option value="48">Paul Norton</option>
+                                        <option value="49">Dalton Boyle</option>
+                                        <option value="50">
+                                          Melyssa Lindsay
+                                        </option>
+                                        <option value="51">
+                                          Britanni Talley
+                                        </option>
+                                        <option value="52">Orson Mcleod</option>
+                                        <option value="53">
+                                          Adele Jacobson
+                                        </option>
+                                        <option value="54">
+                                          Finn Montgomery
+                                        </option>
+                                        <option value="55">
+                                          Abraham Roman
+                                        </option>
+                                        <option value="56">
+                                          Michael Alston
+                                        </option>
+                                        <option value="57">
+                                          Kaseem Barrett
+                                        </option>
+                                        <option value="58">Vance Burch</option>
+                                        <option value="59">Olga Snider</option>
+                                        <option value="60">Mira Fields</option>
+                                        <option value="61">
+                                          Wyoming Willis
+                                        </option>
+                                        <option value="62">Marvin Carr</option>
+                                        <option value="63">May Allison</option>
+                                        <option value="64">
+                                          Nehru Bartlett
+                                        </option>
+                                        <option value="65">Jonas Roth</option>
+                                        <option value="66">
+                                          Kelsie Medina
+                                        </option>
+                                        <option value="67">
+                                          Jameson Cochran
+                                        </option>
+                                        <option value="68">
+                                          Breanna Shepard
+                                        </option>
+                                        <option value="69">
+                                          Kristen Lowery
+                                        </option>
+                                        <option value="70">
+                                          Dennis Christensen
+                                        </option>
+                                        <option value="71">
+                                          Hakeem Hampton
+                                        </option>
+                                        <option value="72">Melvin Bowen</option>
+                                        <option value="73">
+                                          Sopoline Rosario
+                                        </option>
+                                        <option value="74">Oscar Jones</option>
+                                        <option value="75">
+                                          Sopoline Powers
+                                        </option>
+                                        <option value="76">
+                                          Gabriel Lambert
+                                        </option>
+                                        <option value="77">
+                                          Hilel Bartlett
+                                        </option>
+                                        <option value="78">
+                                          Felicia Clarke
+                                        </option>
+                                        <option value="79">
+                                          Garrett Blake
+                                        </option>
+                                        <option value="80">
+                                          Hashim Ramirez
+                                        </option>
+                                        <option value="81">
+                                          Erasmus Sheppard
+                                        </option>
+                                        <option value="82">
+                                          Uriel Mathews
+                                        </option>
+                                        <option value="83">Conan Bailey</option>
+                                        <option value="84">Palmer Frost</option>
+                                        <option value="85">
+                                          Byron Schultz
+                                        </option>
+                                        <option value="86">Oliver Gray</option>
+                                        <option value="87">
+                                          Curran Everett
+                                        </option>
+                                        <option value="88">Leroy Reese</option>
+                                        <option value="89">
+                                          Mia Stephenson
+                                        </option>
+                                        <option value="90">Tanisha Koch</option>
+                                        <option value="91">Xander James</option>
+                                        <option value="92">Quinlan Vang</option>
+                                        <option value="93">Gil Wells</option>
+                                        <option value="94">Sharon Short</option>
+                                        <option value="95">Sydney Huber</option>
+                                        <option value="96">Rowan White</option>
+                                        <option value="97">
+                                          Tyrone Holloway
+                                        </option>
+                                        <option value="98">Dai Rosario</option>
+                                        <option value="99">
+                                          Jason Mckinney
+                                        </option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                  <!-- Customers -->
+                                  <div class="form-group row">
+                                    <label class="col-md-3 mt-2"
+                                      >Customer</label
+                                    >
+                                    <div class="col-md-9">
+                                      <select
+                                        class="form-select"
+                                        aria-label="Default select example"
+                                        id="customer"
+                                      >
+                                        <option selected disabled>
+                                          Choose a customer
+                                        </option>
+                                        <option value="0">Desiree Hess</option>
+                                        <option value="1">Cole Randolph</option>
+                                        <option value="2">
+                                          Kareem Holcomb
+                                        </option>
+                                        <option value="3">
+                                          Beatrice Graham
+                                        </option>
+                                        <option value="4">Warren Guzman</option>
+                                        <option value="5">
+                                          Kennedy Harvey
+                                        </option>
+                                        <option value="6">
+                                          Sydney Stanley
+                                        </option>
+                                        <option value="7">Uriah Franco</option>
+                                        <option value="8">
+                                          Solomon Mercer
+                                        </option>
+                                        <option value="9">Thane Sosa</option>
+                                        <option value="10">Emi Glover</option>
+                                        <option value="11">Raya Boyle</option>
+                                        <option value="12">
+                                          Imogene Kramer
+                                        </option>
+                                        <option value="13">Baxter Gill</option>
+                                        <option value="14">Stacey Olson</option>
+                                        <option value="15">Alan Jensen</option>
+                                        <option value="16">
+                                          Simone Bowman
+                                        </option>
+                                        <option value="17">Wing Mcclain</option>
+                                        <option value="18">
+                                          Jakeem Ashley
+                                        </option>
+                                        <option value="19">Ivan Vaughan</option>
+                                        <option value="20">Brenda Rocha</option>
+                                        <option value="21">
+                                          Madeline Mckee
+                                        </option>
+                                        <option value="22">Julie Stokes</option>
+                                        <option value="23">Joy Matthews</option>
+                                        <option value="24">
+                                          Amena Vasquez
+                                        </option>
+                                        <option value="25">
+                                          Cassidy Gomez
+                                        </option>
+                                        <option value="26">
+                                          Nomlanga Vang
+                                        </option>
+                                        <option value="27">
+                                          September Whitney
+                                        </option>
+                                        <option value="28">Scott Le</option>
+                                        <option value="29">Skyler Tate</option>
+                                        <option value="30">
+                                          Raven Herring
+                                        </option>
+                                        <option value="31">
+                                          Carla Robinson
+                                        </option>
+                                        <option value="32">
+                                          Karina Greene
+                                        </option>
+                                        <option value="33">
+                                          Uriel Sheppard
+                                        </option>
+                                        <option value="34">
+                                          Lyle Jefferson
+                                        </option>
+                                        <option value="35">Sean Mendoza</option>
+                                        <option value="36">Rogan Foster</option>
+                                        <option value="37">Colin Cooper</option>
+                                        <option value="38">Omar Rogers</option>
+                                        <option value="39">
+                                          Jelani Howard
+                                        </option>
+                                        <option value="40">
+                                          Carly Compton
+                                        </option>
+                                        <option value="41">
+                                          Griffith Mcgowan
+                                        </option>
+                                        <option value="42">Ila Malone</option>
+                                        <option value="43">Stone Travis</option>
+                                        <option value="44">
+                                          Hilary Hayden
+                                        </option>
+                                        <option value="45">Phoebe Ball</option>
+                                        <option value="46">Adria Tucker</option>
+                                        <option value="47">Stone Waters</option>
+                                        <option value="48">Warren Bryan</option>
+                                        <option value="49">
+                                          Marshall Holden
+                                        </option>
+                                        <option value="50">
+                                          Griffin Bullock
+                                        </option>
+                                        <option value="51">Shad Salas</option>
+                                        <option value="52">
+                                          Yoshio Harvey
+                                        </option>
+                                        <option value="53">
+                                          Aurora Adkins
+                                        </option>
+                                        <option value="54">Sage Reid</option>
+                                        <option value="55">
+                                          MacKensie Newman
+                                        </option>
+                                        <option value="56">
+                                          Hilary Gentry
+                                        </option>
+                                        <option value="57">
+                                          Vivian Austin
+                                        </option>
+                                        <option value="58">
+                                          Maggie Decker
+                                        </option>
+                                        <option value="59">
+                                          Tatiana Castaneda
+                                        </option>
+                                        <option value="60">
+                                          Isadora Bradford
+                                        </option>
+                                        <option value="61">
+                                          Timon Dillard
+                                        </option>
+                                        <option value="62">Yuri Curry</option>
+                                        <option value="63">Ross Duran</option>
+                                        <option value="64">Lois Allen</option>
+                                        <option value="65">
+                                          Angelica Rojas
+                                        </option>
+                                        <option value="66">
+                                          Melodie Gonzalez
+                                        </option>
+                                        <option value="67">
+                                          Mohammad Terry
+                                        </option>
+                                        <option value="68">
+                                          Charity Levine
+                                        </option>
+                                        <option value="69">Leah Le</option>
+                                        <option value="70">Heidi Dalton</option>
+                                        <option value="71">
+                                          Benjamin Dale
+                                        </option>
+                                        <option value="72">
+                                          Shad Livingston
+                                        </option>
+                                        <option value="73">Vielka Parks</option>
+                                        <option value="74">Zenia Wolf</option>
+                                        <option value="75">
+                                          Evan Donaldson
+                                        </option>
+                                        <option value="76">
+                                          Cameran Sanders
+                                        </option>
+                                        <option value="77">Brian Ford</option>
+                                        <option value="78">Hamish Booth</option>
+                                        <option value="79">
+                                          Christen Blankenship
+                                        </option>
+                                        <option value="80">Neve Cherry</option>
+                                        <option value="81">
+                                          Isabella Baird
+                                        </option>
+                                        <option value="82">
+                                          Armando Norman
+                                        </option>
+                                        <option value="83">
+                                          Justin Travis
+                                        </option>
+                                        <option value="84">Lana Carter</option>
+                                        <option value="85">Quail Nelson</option>
+                                        <option value="86">Clio Kelly</option>
+                                        <option value="87">Lev Chaney</option>
+                                        <option value="88">Ryder Hurst</option>
+                                        <option value="89">Lev Mcdaniel</option>
+                                        <option value="90">Joseph Mason</option>
+                                        <option value="91">Tate Lynch</option>
+                                        <option value="92">Wing Wallace</option>
+                                        <option value="93">
+                                          Travis Mcconnell
+                                        </option>
+                                        <option value="94">
+                                          Lacota Riddle
+                                        </option>
+                                        <option value="95">
+                                          Kennedy Fitzpatrick
+                                        </option>
+                                        <option value="96">
+                                          Kim Davenport
+                                        </option>
+                                        <option value="97">
+                                          Clementine Logan
+                                        </option>
+                                        <option value="98">
+                                          Belle Douglas
+                                        </option>
+                                        <option value="99">Jada Moreno</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                  <div class="form-group row">
+                                    <label
+                                      for="cono1"
+                                      class="col-sm-3 text-end control-label col-form-label"
+                                    >
+                                      Status
+                                    </label>
+                                    <div class="col-sm-9">
+                                      <select
+                                        class="form-select"
+                                        aria-label="Default select example"
+                                        id="unit"
+                                      >
+                                        <option selected disabled>
+                                          Status types
+                                        </option>
+                                        <option value="1">Pending</option>
+                                        <option value="2">Completed</option>
+                                        <option value="3">Paid</option>
+                                        <option value="4">Rejected</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                  <div class="form-group row">
+                                    <label
+                                      for="cono1"
+                                      class="col-sm-3 text-end control-label col-form-label"
+                                    >
+                                      Booked at
+                                    </label>
+                                    <div class="col-sm-9">
+                                      <div class="input-group">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="datepicker-autoclose"
+                                          placeholder="mm/dd/yyyy"
+                                        />
+                                        <div class="input-group-append">
+                                          <span class="input-group-text h-100"
+                                            ><i class="mdi mdi-calendar"></i
+                                          ></span>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+                            <div class="modal-footer">
+                              <button
+                                type="button"
+                                class="btn btn-secondary"
+                                data-bs-dismiss="modal"
+                              >
+                                Close
+                              </button>
+                              <button type="button" class="btn btn-primary">
+                                Save changes
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </li>
                     <li class="nav-item">
                       <a href="#" class="btn btn-danger">
@@ -477,14 +1018,14 @@
                           <td>04/16/2022</td>
                           <td>Tashya Cook</td>
                           <td>Mufutau Cameron</td>
-                          <td>Completed</td>
                           <td>
-                            <button class="btn btn-info">
+                            <span class="badge bg-primary">Completed</span>
+                          </td>
+                          <td>
+                            <a href="reservation-detail.html" class="btn btn-info">
                               <i class="mdi mdi-details"></i>
-                            </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            </a>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -498,14 +1039,12 @@
                           <td>10/25/2020</td>
                           <td>Oleg Hancock</td>
                           <td>Lawrence Potts</td>
-                          <td>Rejected</td>
+                          <td><span class="badge bg-danger">Rejected</span></td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -519,14 +1058,12 @@
                           <td>10/03/2020</td>
                           <td>Phillip Morton</td>
                           <td>Colleen Foster</td>
-                          <td>Rejected</td>
+                          <td><span class="badge bg-danger">Rejected</span></td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -540,14 +1077,12 @@
                           <td>12/01/2018</td>
                           <td>Kennan Stanton</td>
                           <td>MacKensie Becker</td>
-                          <td>Rejected</td>
+                          <td><span class="badge bg-danger">Rejected</span></td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -561,14 +1096,12 @@
                           <td>02/09/2021</td>
                           <td>Demetrius Bell</td>
                           <td>Allegra Haley</td>
-                          <td>Pending</td>
+                          <td><span class="badge bg-success">Pending</span></td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -582,14 +1115,14 @@
                           <td>09/17/2020</td>
                           <td>Freya Talley</td>
                           <td>Robert Weiss</td>
-                          <td>Completed</td>
+                          <td>
+                            <span class="badge bg-primary">Completed</span>
+                          </td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -603,14 +1136,14 @@
                           <td>02/21/2022</td>
                           <td>Lev Melton</td>
                           <td>Phillip Simon</td>
-                          <td>Completed</td>
+                          <td>
+                            <span class="badge bg-primary">Completed</span>
+                          </td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -624,14 +1157,12 @@
                           <td>10/10/2021</td>
                           <td>Ginger Phillips</td>
                           <td>Nevada Bright</td>
-                          <td>Pending</td>
+                          <td><span class="badge bg-success">Pending</span></td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -645,14 +1176,14 @@
                           <td>11/26/2018</td>
                           <td>Cain Acosta</td>
                           <td>Inga O'Neill</td>
-                          <td>Completed</td>
+                          <td>
+                            <span class="badge bg-primary">Completed</span>
+                          </td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -666,14 +1197,12 @@
                           <td>08/13/2021</td>
                           <td>Josephine Knowles</td>
                           <td>Mercedes Wynn</td>
-                          <td>Paid</td>
+                          <td><span class="badge bg-info">Paid</span></td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -687,14 +1216,12 @@
                           <td>07/18/2021</td>
                           <td>Steven Blankenship</td>
                           <td>Inez Fernandez</td>
-                          <td>Pending</td>
+                          <td><span class="badge bg-success">Pending</span></td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -708,14 +1235,12 @@
                           <td>06/19/2021</td>
                           <td>Wallace Nicholson</td>
                           <td>Alan Snider</td>
-                          <td>Pending</td>
+                          <td><span class="badge bg-success">Pending</span></td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -729,14 +1254,12 @@
                           <td>10/16/2020</td>
                           <td>Wilma Horne</td>
                           <td>Driscoll Vincent</td>
-                          <td>Paid</td>
+                          <td><span class="badge bg-info">Paid</span></td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -750,14 +1273,12 @@
                           <td>03/02/2022</td>
                           <td>Hop Harmon</td>
                           <td>Hammett Colon</td>
-                          <td>Rejected</td>
+                          <td><span class="badge bg-danger">Rejected</span></td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -771,14 +1292,14 @@
                           <td>06/29/2019</td>
                           <td>Shafira Harper</td>
                           <td>Hayfa Gould</td>
-                          <td>Completed</td>
+                          <td>
+                            <span class="badge bg-primary">Completed</span>
+                          </td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -792,14 +1313,14 @@
                           <td>10/30/2021</td>
                           <td>Belle Pate</td>
                           <td>Ali Rivera</td>
-                          <td>Completed</td>
+                          <td>
+                            <span class="badge bg-primary">Completed</span>
+                          </td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -813,14 +1334,12 @@
                           <td>04/10/2020</td>
                           <td>Courtney Greene</td>
                           <td>Dalton Riddle</td>
-                          <td>Rejected</td>
+                          <td><span class="badge bg-danger">Rejected</span></td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -834,14 +1353,12 @@
                           <td>04/14/2020</td>
                           <td>Berk Mack</td>
                           <td>Shaeleigh Melton</td>
-                          <td>Pending</td>
+                          <td><span class="badge bg-success">Pending</span></td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -855,14 +1372,12 @@
                           <td>06/26/2021</td>
                           <td>Xyla Alford</td>
                           <td>Lareina Good</td>
-                          <td>Rejected</td>
+                          <td><span class="badge bg-danger">Rejected</span></td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -876,14 +1391,12 @@
                           <td>01/12/2020</td>
                           <td>Iola Baxter</td>
                           <td>Elaine Noel</td>
-                          <td>Paid</td>
+                          <td><span class="badge bg-info">Paid</span></td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -897,14 +1410,14 @@
                           <td>12/16/2021</td>
                           <td>Upton Lynn</td>
                           <td>Willa Greene</td>
-                          <td>Completed</td>
+                          <td>
+                            <span class="badge bg-primary">Completed</span>
+                          </td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -918,14 +1431,12 @@
                           <td>07/28/2020</td>
                           <td>Quin Vincent</td>
                           <td>Cruz Lawson</td>
-                          <td>Rejected</td>
+                          <td><span class="badge bg-danger">Rejected</span></td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -939,14 +1450,12 @@
                           <td>04/18/2020</td>
                           <td>Tate Combs</td>
                           <td>Honorato Cabrera</td>
-                          <td>Rejected</td>
+                          <td><span class="badge bg-danger">Rejected</span></td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -960,14 +1469,12 @@
                           <td>08/24/2019</td>
                           <td>Sybil Clark</td>
                           <td>Felicia Garcia</td>
-                          <td>Pending</td>
+                          <td><span class="badge bg-success">Pending</span></td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -981,14 +1488,12 @@
                           <td>12/03/2019</td>
                           <td>Skyler Richmond</td>
                           <td>Davis Whitaker</td>
-                          <td>Paid</td>
+                          <td><span class="badge bg-info">Paid</span></td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -1002,14 +1507,12 @@
                           <td>09/15/2020</td>
                           <td>Lane Hewitt</td>
                           <td>Latifah Dudley</td>
-                          <td>Rejected</td>
+                          <td><span class="badge bg-danger">Rejected</span></td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -1023,14 +1526,12 @@
                           <td>01/22/2021</td>
                           <td>Ariana Carroll</td>
                           <td>Rhiannon Robbins</td>
-                          <td>Rejected</td>
+                          <td><span class="badge bg-danger">Rejected</span></td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -1044,14 +1545,12 @@
                           <td>12/11/2018</td>
                           <td>Addison Bryant</td>
                           <td>George House</td>
-                          <td>Pending</td>
+                          <td><span class="badge bg-success">Pending</span></td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -1065,14 +1564,12 @@
                           <td>03/06/2019</td>
                           <td>Kevin Carr</td>
                           <td>Grant O'Neill</td>
-                          <td>Pending</td>
+                          <td><span class="badge bg-success">Pending</span></td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -1086,14 +1583,14 @@
                           <td>04/12/2022</td>
                           <td>Dustin Tanner</td>
                           <td>Francesca Joyner</td>
-                          <td>Completed</td>
+                          <td>
+                            <span class="badge bg-primary">Completed</span>
+                          </td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -1107,14 +1604,14 @@
                           <td>06/14/2020</td>
                           <td>Ocean Miranda</td>
                           <td>Brendan Nichols</td>
-                          <td>Completed</td>
+                          <td>
+                            <span class="badge bg-primary">Completed</span>
+                          </td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -1128,14 +1625,12 @@
                           <td>03/15/2022</td>
                           <td>Amity Mckay</td>
                           <td>Elizabeth Valentine</td>
-                          <td>Paid</td>
+                          <td><span class="badge bg-info">Paid</span></td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -1149,14 +1644,12 @@
                           <td>11/06/2021</td>
                           <td>Gloria Holden</td>
                           <td>Quin Morin</td>
-                          <td>Paid</td>
+                          <td><span class="badge bg-info">Paid</span></td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -1170,14 +1663,14 @@
                           <td>10/12/2019</td>
                           <td>Shad Deleon</td>
                           <td>Shafira Jacobs</td>
-                          <td>Completed</td>
+                          <td>
+                            <span class="badge bg-primary">Completed</span>
+                          </td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -1191,14 +1684,12 @@
                           <td>10/21/2019</td>
                           <td>Grady Bray</td>
                           <td>Fleur Edwards</td>
-                          <td>Pending</td>
+                          <td><span class="badge bg-success">Pending</span></td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -1212,14 +1703,12 @@
                           <td>08/07/2019</td>
                           <td>Paloma Clay</td>
                           <td>September Avila</td>
-                          <td>Rejected</td>
+                          <td><span class="badge bg-danger">Rejected</span></td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -1233,14 +1722,14 @@
                           <td>06/10/2020</td>
                           <td>Florence Nieves</td>
                           <td>Sean Noble</td>
-                          <td>Completed</td>
+                          <td>
+                            <span class="badge bg-primary">Completed</span>
+                          </td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -1254,14 +1743,12 @@
                           <td>02/17/2021</td>
                           <td>Aurora Curtis</td>
                           <td>Luke Dickerson</td>
-                          <td>Rejected</td>
+                          <td><span class="badge bg-danger">Rejected</span></td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -1275,14 +1762,12 @@
                           <td>08/20/2021</td>
                           <td>Savannah Walls</td>
                           <td>Wilma Pope</td>
-                          <td>Rejected</td>
+                          <td><span class="badge bg-danger">Rejected</span></td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -1296,14 +1781,12 @@
                           <td>12/08/2018</td>
                           <td>Rooney Gilliam</td>
                           <td>Jared Hewitt</td>
-                          <td>Paid</td>
+                          <td><span class="badge bg-info">Paid</span></td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -1317,14 +1800,12 @@
                           <td>11/06/2021</td>
                           <td>Damian Patel</td>
                           <td>Violet Shaw</td>
-                          <td>Paid</td>
+                          <td><span class="badge bg-info">Paid</span></td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -1338,14 +1819,12 @@
                           <td>10/07/2021</td>
                           <td>Rigel Burch</td>
                           <td>Sean Simmons</td>
-                          <td>Paid</td>
+                          <td><span class="badge bg-info">Paid</span></td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -1359,14 +1838,12 @@
                           <td>03/11/2021</td>
                           <td>Justine Pena</td>
                           <td>Riley Gallagher</td>
-                          <td>Paid</td>
+                          <td><span class="badge bg-info">Paid</span></td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -1380,14 +1857,12 @@
                           <td>07/14/2020</td>
                           <td>Trevor Randolph</td>
                           <td>Jennifer Morales</td>
-                          <td>Pending</td>
+                          <td><span class="badge bg-success">Pending</span></td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -1401,14 +1876,12 @@
                           <td>03/17/2022</td>
                           <td>Jillian Benjamin</td>
                           <td>Sacha Mosley</td>
-                          <td>Pending</td>
+                          <td><span class="badge bg-success">Pending</span></td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -1422,14 +1895,12 @@
                           <td>12/02/2021</td>
                           <td>Jasper Holcomb</td>
                           <td>Ian Ratliff</td>
-                          <td>Rejected</td>
+                          <td><span class="badge bg-danger">Rejected</span></td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -1443,14 +1914,12 @@
                           <td>10/28/2019</td>
                           <td>Felix Love</td>
                           <td>Hillary Morton</td>
-                          <td>Pending</td>
+                          <td><span class="badge bg-success">Pending</span></td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -1464,14 +1933,12 @@
                           <td>01/21/2022</td>
                           <td>Damian Keller</td>
                           <td>Eliana Ryan</td>
-                          <td>Rejected</td>
+                          <td><span class="badge bg-danger">Rejected</span></td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -1485,14 +1952,12 @@
                           <td>03/06/2019</td>
                           <td>Kibo Gallagher</td>
                           <td>Sydney Parks</td>
-                          <td>Paid</td>
+                          <td><span class="badge bg-info">Paid</span></td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -1506,14 +1971,12 @@
                           <td>10/11/2020</td>
                           <td>Madeson Paul</td>
                           <td>Rosalyn Tillman</td>
-                          <td>Pending</td>
+                          <td><span class="badge bg-success">Pending</span></td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -1527,14 +1990,12 @@
                           <td>05/08/2019</td>
                           <td>Eleanor Mcfarland</td>
                           <td>Adrienne Merrill</td>
-                          <td>Pending</td>
+                          <td><span class="badge bg-success">Pending</span></td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -1548,14 +2009,14 @@
                           <td>02/16/2019</td>
                           <td>Violet Cook</td>
                           <td>Quin Garcia</td>
-                          <td>Completed</td>
+                          <td>
+                            <span class="badge bg-primary">Completed</span>
+                          </td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -1569,14 +2030,12 @@
                           <td>11/04/2019</td>
                           <td>Madeson Burns</td>
                           <td>Stacy Tyler</td>
-                          <td>Paid</td>
+                          <td><span class="badge bg-info">Paid</span></td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -1590,14 +2049,12 @@
                           <td>07/08/2021</td>
                           <td>Solomon Mccormick</td>
                           <td>Dolan Downs</td>
-                          <td>Paid</td>
+                          <td><span class="badge bg-info">Paid</span></td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -1611,14 +2068,12 @@
                           <td>07/11/2020</td>
                           <td>Dylan Justice</td>
                           <td>Faith Coleman</td>
-                          <td>Pending</td>
+                          <td><span class="badge bg-success">Pending</span></td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -1632,14 +2087,12 @@
                           <td>02/14/2020</td>
                           <td>Austin Rose</td>
                           <td>Ursa Cortez</td>
-                          <td>Rejected</td>
+                          <td><span class="badge bg-danger">Rejected</span></td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -1653,14 +2106,12 @@
                           <td>02/21/2021</td>
                           <td>Andrew Mcneil</td>
                           <td>Kai Ingram</td>
-                          <td>Rejected</td>
+                          <td><span class="badge bg-danger">Rejected</span></td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -1674,14 +2125,12 @@
                           <td>12/03/2018</td>
                           <td>Lucas Chan</td>
                           <td>Tobias Rutledge</td>
-                          <td>Rejected</td>
+                          <td><span class="badge bg-danger">Rejected</span></td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -1695,14 +2144,12 @@
                           <td>12/21/2019</td>
                           <td>Ryan Hamilton</td>
                           <td>Evangeline Durham</td>
-                          <td>Paid</td>
+                          <td><span class="badge bg-info">Paid</span></td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -1716,14 +2163,14 @@
                           <td>02/16/2022</td>
                           <td>Celeste Watkins</td>
                           <td>Timothy Holland</td>
-                          <td>Completed</td>
+                          <td>
+                            <span class="badge bg-primary">Completed</span>
+                          </td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -1737,14 +2184,14 @@
                           <td>11/18/2018</td>
                           <td>Chaney Glenn</td>
                           <td>Shad Case</td>
-                          <td>Completed</td>
+                          <td>
+                            <span class="badge bg-primary">Completed</span>
+                          </td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -1758,14 +2205,12 @@
                           <td>06/18/2019</td>
                           <td>Jillian Woods</td>
                           <td>Kenyon Ryan</td>
-                          <td>Paid</td>
+                          <td><span class="badge bg-info">Paid</span></td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -1779,14 +2224,14 @@
                           <td>10/14/2019</td>
                           <td>Brady Cantu</td>
                           <td>Colton Raymond</td>
-                          <td>Completed</td>
+                          <td>
+                            <span class="badge bg-primary">Completed</span>
+                          </td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -1800,14 +2245,12 @@
                           <td>06/23/2020</td>
                           <td>Ryder Simmons</td>
                           <td>Caleb Spence</td>
-                          <td>Paid</td>
+                          <td><span class="badge bg-info">Paid</span></td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -1821,14 +2264,12 @@
                           <td>07/14/2021</td>
                           <td>Kiayada Burt</td>
                           <td>Cally Potter</td>
-                          <td>Pending</td>
+                          <td><span class="badge bg-success">Pending</span></td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -1842,14 +2283,12 @@
                           <td>03/19/2021</td>
                           <td>Lyle O'donnell</td>
                           <td>Stuart Kinney</td>
-                          <td>Rejected</td>
+                          <td><span class="badge bg-danger">Rejected</span></td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -1863,14 +2302,12 @@
                           <td>02/25/2021</td>
                           <td>Joan Hodges</td>
                           <td>Ruth Barton</td>
-                          <td>Rejected</td>
+                          <td><span class="badge bg-danger">Rejected</span></td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -1884,14 +2321,14 @@
                           <td>01/05/2020</td>
                           <td>Dante Melton</td>
                           <td>Jemima Cummings</td>
-                          <td>Completed</td>
+                          <td>
+                            <span class="badge bg-primary">Completed</span>
+                          </td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -1905,14 +2342,14 @@
                           <td>05/21/2021</td>
                           <td>Macey Gonzalez</td>
                           <td>Jemima Walker</td>
-                          <td>Completed</td>
+                          <td>
+                            <span class="badge bg-primary">Completed</span>
+                          </td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -1926,14 +2363,12 @@
                           <td>12/18/2019</td>
                           <td>Morgan Hale</td>
                           <td>Demetria Sexton</td>
-                          <td>Rejected</td>
+                          <td><span class="badge bg-danger">Rejected</span></td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -1947,14 +2382,14 @@
                           <td>11/30/2021</td>
                           <td>Cora Rutledge</td>
                           <td>Ezekiel Heath</td>
-                          <td>Completed</td>
+                          <td>
+                            <span class="badge bg-primary">Completed</span>
+                          </td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -1968,14 +2403,14 @@
                           <td>12/18/2019</td>
                           <td>Mercedes Gilliam</td>
                           <td>Paula Campbell</td>
-                          <td>Completed</td>
+                          <td>
+                            <span class="badge bg-primary">Completed</span>
+                          </td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -1989,14 +2424,14 @@
                           <td>09/05/2019</td>
                           <td>Brenna Cooper</td>
                           <td>Daryl Leonard</td>
-                          <td>Completed</td>
+                          <td>
+                            <span class="badge bg-primary">Completed</span>
+                          </td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -2010,14 +2445,14 @@
                           <td>08/01/2019</td>
                           <td>Ora Cobb</td>
                           <td>Caryn Callahan</td>
-                          <td>Completed</td>
+                          <td>
+                            <span class="badge bg-primary">Completed</span>
+                          </td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -2031,14 +2466,12 @@
                           <td>09/01/2021</td>
                           <td>Jordan Burns</td>
                           <td>Lucas Pickett</td>
-                          <td>Pending</td>
+                          <td><span class="badge bg-success">Pending</span></td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -2052,14 +2485,14 @@
                           <td>01/05/2022</td>
                           <td>Kelly Burton</td>
                           <td>Lucius Vaughan</td>
-                          <td>Completed</td>
+                          <td>
+                            <span class="badge bg-primary">Completed</span>
+                          </td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -2073,14 +2506,14 @@
                           <td>04/19/2019</td>
                           <td>Tallulah Rosario</td>
                           <td>Harrison Avery</td>
-                          <td>Completed</td>
+                          <td>
+                            <span class="badge bg-primary">Completed</span>
+                          </td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -2094,14 +2527,14 @@
                           <td>01/26/2020</td>
                           <td>Olympia Holman</td>
                           <td>Candace Fuller</td>
-                          <td>Completed</td>
+                          <td>
+                            <span class="badge bg-primary">Completed</span>
+                          </td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -2115,14 +2548,14 @@
                           <td>10/03/2020</td>
                           <td>Clinton Alexander</td>
                           <td>Kyle Carlson</td>
-                          <td>Completed</td>
+                          <td>
+                            <span class="badge bg-primary">Completed</span>
+                          </td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -2136,14 +2569,14 @@
                           <td>11/23/2019</td>
                           <td>Kuame Riggs</td>
                           <td>Clark Rosales</td>
-                          <td>Completed</td>
+                          <td>
+                            <span class="badge bg-primary">Completed</span>
+                          </td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -2157,14 +2590,14 @@
                           <td>07/30/2021</td>
                           <td>Judah Landry</td>
                           <td>Lara Mccall</td>
-                          <td>Completed</td>
+                          <td>
+                            <span class="badge bg-primary">Completed</span>
+                          </td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -2178,14 +2611,12 @@
                           <td>05/01/2021</td>
                           <td>Liberty Cole</td>
                           <td>Xenos Avila</td>
-                          <td>Pending</td>
+                          <td><span class="badge bg-success">Pending</span></td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -2199,14 +2630,14 @@
                           <td>08/08/2019</td>
                           <td>Nita Cleveland</td>
                           <td>Oliver Farley</td>
-                          <td>Completed</td>
+                          <td>
+                            <span class="badge bg-primary">Completed</span>
+                          </td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -2220,14 +2651,12 @@
                           <td>11/28/2018</td>
                           <td>Kelly Morrison</td>
                           <td>Alma Harper</td>
-                          <td>Paid</td>
+                          <td><span class="badge bg-info">Paid</span></td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -2241,14 +2670,14 @@
                           <td>10/08/2021</td>
                           <td>Neve Conley</td>
                           <td>Bo Neal</td>
-                          <td>Completed</td>
+                          <td>
+                            <span class="badge bg-primary">Completed</span>
+                          </td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -2262,14 +2691,12 @@
                           <td>06/14/2019</td>
                           <td>Barclay Ayers</td>
                           <td>Merrill Carrillo</td>
-                          <td>Rejected</td>
+                          <td><span class="badge bg-danger">Rejected</span></td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -2283,14 +2710,12 @@
                           <td>03/05/2021</td>
                           <td>Brock Hicks</td>
                           <td>Arthur Patel</td>
-                          <td>Pending</td>
+                          <td><span class="badge bg-success">Pending</span></td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -2304,14 +2729,12 @@
                           <td>03/04/2022</td>
                           <td>Wynter House</td>
                           <td>Hop Bishop</td>
-                          <td>Rejected</td>
+                          <td><span class="badge bg-danger">Rejected</span></td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -2325,14 +2748,12 @@
                           <td>07/11/2020</td>
                           <td>Noble Fulton</td>
                           <td>Dana Ayala</td>
-                          <td>Pending</td>
+                          <td><span class="badge bg-success">Pending</span></td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -2346,14 +2767,14 @@
                           <td>08/25/2019</td>
                           <td>Randall Downs</td>
                           <td>Baxter Flores</td>
-                          <td>Completed</td>
+                          <td>
+                            <span class="badge bg-primary">Completed</span>
+                          </td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -2367,14 +2788,14 @@
                           <td>02/16/2021</td>
                           <td>Hiroko Holland</td>
                           <td>Dolan Estes</td>
-                          <td>Completed</td>
+                          <td>
+                            <span class="badge bg-primary">Completed</span>
+                          </td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -2388,14 +2809,14 @@
                           <td>12/26/2020</td>
                           <td>Kathleen Nixon</td>
                           <td>Garrett Paul</td>
-                          <td>Completed</td>
+                          <td>
+                            <span class="badge bg-primary">Completed</span>
+                          </td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -2409,14 +2830,14 @@
                           <td>04/02/2020</td>
                           <td>Petra Bradley</td>
                           <td>Ila Drake</td>
-                          <td>Completed</td>
+                          <td>
+                            <span class="badge bg-primary">Completed</span>
+                          </td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -2430,14 +2851,12 @@
                           <td>03/03/2019</td>
                           <td>Harlan Pittman</td>
                           <td>Madeson Murray</td>
-                          <td>Pending</td>
+                          <td><span class="badge bg-success">Pending</span></td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -2451,14 +2870,12 @@
                           <td>07/28/2021</td>
                           <td>Owen Hendricks</td>
                           <td>Hedley Estrada</td>
-                          <td>Paid</td>
+                          <td><span class="badge bg-info">Paid</span></td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -2472,14 +2889,12 @@
                           <td>12/02/2019</td>
                           <td>Rina Goodman</td>
                           <td>Angelica Clark</td>
-                          <td>Paid</td>
+                          <td><span class="badge bg-info">Paid</span></td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -2493,14 +2908,12 @@
                           <td>08/08/2020</td>
                           <td>Timon Acosta</td>
                           <td>Bianca Randall</td>
-                          <td>Paid</td>
+                          <td><span class="badge bg-info">Paid</span></td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -2514,14 +2927,12 @@
                           <td>08/04/2020</td>
                           <td>Alika Good</td>
                           <td>Arsenio Durham</td>
-                          <td>Rejected</td>
+                          <td><span class="badge bg-danger">Rejected</span></td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -2535,14 +2946,14 @@
                           <td>07/19/2021</td>
                           <td>Jaime Villarreal</td>
                           <td>Germane Joyner</td>
-                          <td>Completed</td>
+                          <td>
+                            <span class="badge bg-primary">Completed</span>
+                          </td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                         <tr>
@@ -2556,14 +2967,12 @@
                           <td>05/31/2021</td>
                           <td>Tatum Adams</td>
                           <td>Price Mejia</td>
-                          <td>Rejected</td>
+                          <td><span class="badge bg-danger">Rejected</span></td>
                           <td>
                             <button class="btn btn-info">
                               <i class="mdi mdi-details"></i>
                             </button>
-                            <button class="btn btn-warning">
-                              <i class="mdi mdi-lock"></i>
-                            </button>
+                            
                           </td>
                         </tr>
                       </tbody>
@@ -2634,12 +3043,17 @@
     <!-- this page js -->
     <script src="../assets/extra-libs/multicheck/datatable-checkbox-init.js"></script>
     <script src="../assets/extra-libs/multicheck/jquery.multicheck.js"></script>
+    <script src="../assets/libs/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
     <script src="../assets/extra-libs/DataTables/datatables.min.js"></script>
     <script>
       /****************************************
        *       Basic Table                   *
        ****************************************/
       $('#zero_config').DataTable();
+      jQuery("#datepicker-autoclose").datepicker({
+        autoclose: true,
+        todayHighlight: true,
+      });
     </script>
   </body>
 </html>

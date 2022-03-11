@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="keywords"
+      content="wrappixel, admin dashboard, html css dashboard, web dashboard, bootstrap 5 admin, bootstrap 5, css3 dashboard, bootstrap 5 dashboard, Matrix lite admin bootstrap 5 dashboard, frontend, responsive bootstrap 5 admin template, Matrix admin lite design, Matrix admin lite dashboard bootstrap 5 dashboard template"
+    />
+    <meta
+      name="description"
+      content="Matrix Admin Lite Free Version is powerful and clean admin dashboard template, inpired from Bootstrap Framework"
+    />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>Matrix Admin Lite Free Versions Template by WrapPixel</title>
+    <!-- Favicon icon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../assets/images/favicon.png"
+    />
+    <!-- Custom CSS -->
+    <link href="../assets/libs/flot/css/float-chart.css" rel="stylesheet" />
+    <!-- Custom CSS -->
+    <link href="../dist/css/style.min.css" rel="stylesheet" />
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div class="preloader">
+      <div class="lds-ripple">
+        <div class="lds-pos"></div>
+        <div class="lds-pos"></div>
+      </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div
+      id="main-wrapper"
+      data-layout="vertical"
+      data-navbarbg="skin5"
+      data-sidebartype="full"
+      data-sidebar-position="absolute"
+      data-header-position="absolute"
+      data-boxed-layout="full"
+    >
+      <!-- ============================================================== -->
+      <!-- Topbar header - style you can find in pages.scss -->
+      <!-- ============================================================== -->
+      <header class="topbar" data-navbarbg="skin5">
+        <nav class="navbar top-navbar navbar-expand-md navbar-dark">
+          <div class="navbar-header" data-logobg="skin5">
+            <!-- ============================================================== -->
+            <!-- Logo -->
+            <!-- ============================================================== -->
+            <a class="navbar-brand" href="index.html">
+              <!-- Logo icon -->
+              <b class="logo-icon ps-2">
+                <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
+                <!-- Dark Logo icon -->
+                <img
+                  src="../assets/images/logo-linslus.png"
+                  alt="homepage"
+                  class="light-logo"
+                  width="30"
+                />
+              </b>
+              <!--End Logo icon -->
+              <!-- Logo text -->
+              <span class="logo-text ms-2">
+                <!-- dark Logo text -->
+                <!-- <img
+                  src="../assets/images/logo-text.png"
+                  alt="homepage"
+                  class="light-logo"
+                /> -->
+                <h3 style="margin: 0">Linslus</h3>
+              </span>
+              <!-- Logo icon -->
+              <!-- <b class="logo-icon"> -->
+              <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
+              <!-- Dark Logo icon -->
+              <!-- <img src="../assets/images/logo-text.png" alt="homepage" class="light-logo" /> -->
+
+              <!-- </b> -->
+              <!--End Logo icon -->
+            </a>
+            <!-- ============================================================== -->
+            <!-- End Logo -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- Toggle which is visible on mobile only -->
+            <!-- ============================================================== -->
+            <a
+              class="nav-toggler waves-effect waves-light d-block d-md-none"
+              href="javascript:void(0)"
+              ><i class="ti-menu ti-close"></i
+            ></a>
+          </div>
+          <!-- ============================================================== -->
+          <!-- End Logo -->
+          <!-- ============================================================== -->
+          <div
+            class="navbar-collapse collapse"
+            id="navbarSupportedContent"
+            data-navbarbg="skin5"
+          >
+            <!-- ============================================================== -->
+            <!-- toggle and nav items -->
+            <!-- ============================================================== -->
+            <ul class="navbar-nav float-start me-auto">
+              <li class="nav-item d-none d-lg-block">
+                <a
+                  class="nav-link sidebartoggler waves-effect waves-light"
+                  href="javascript:void(0)"
+                  data-sidebartype="mini-sidebar"
+                  ><i class="mdi mdi-menu font-24"></i
+                ></a>
+              </li>
+
+              <!-- ============================================================== -->
+              <!-- Search -->
+              <!-- ============================================================== -->
+              <li class="nav-item search-box">
+                <a
+                  class="nav-link waves-effect waves-dark"
+                  href="javascript:void(0)"
+                  ><i class="mdi mdi-magnify fs-4"></i
+                ></a>
+                <form class="app-search position-absolute">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Search &amp; enter"
+                  />
+                  <a class="srh-btn"><i class="mdi mdi-window-close"></i></a>
+                </form>
+              </li>
+            </ul>
+            <!-- ============================================================== -->
+            <!-- Right side toggle and nav items -->
+            <!-- ============================================================== -->
+            <ul class="navbar-nav float-end">
+              <!-- ============================================================== -->
+              <!-- Comment -->
+              <!-- ============================================================== -->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="mdi mdi-bell font-24"></i>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </li>
+                </ul>
+              </li>
+              <!-- ============================================================== -->
+              <!-- End Comment -->
+              <!-- ============================================================== -->
+              <!-- ============================================================== -->
+              <!-- Messages -->
+              <!-- ============================================================== -->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle waves-effect waves-dark"
+                  href="#"
+                  id="2"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="font-24 mdi mdi-comment-processing"></i>
+                </a>
+                <ul
+                  class="dropdown-menu dropdown-menu-end mailbox animated bounceInDown"
+                  aria-labelledby="2"
+                >
+                  <ul class="list-style-none">
+                    <li>
+                      <div class="">
+                        <!-- Message -->
+                        <a href="javascript:void(0)" class="link border-top">
+                          <div class="d-flex no-block align-items-center p-10">
+                            <span
+                              class="btn btn-success btn-circle d-flex align-items-center justify-content-center"
+                              ><i class="mdi mdi-calendar text-white fs-4"></i
+                            ></span>
+                            <div class="ms-2">
+                              <h5 class="mb-0">Event today</h5>
+                              <span class="mail-desc"
+                                >Just a reminder that event</span
+                              >
+                            </div>
+                          </div>
+                        </a>
+                        <!-- Message -->
+                        <a href="javascript:void(0)" class="link border-top">
+                          <div class="d-flex no-block align-items-center p-10">
+                            <span
+                              class="btn btn-info btn-circle d-flex align-items-center justify-content-center"
+                              ><i class="mdi mdi-settings fs-4"></i
+                            ></span>
+                            <div class="ms-2">
+                              <h5 class="mb-0">Settings</h5>
+                              <span class="mail-desc"
+                                >You can customize this template</span
+                              >
+                            </div>
+                          </div>
+                        </a>
+                        <!-- Message -->
+                        <a href="javascript:void(0)" class="link border-top">
+                          <div class="d-flex no-block align-items-center p-10">
+                            <span
+                              class="btn btn-primary btn-circle d-flex align-items-center justify-content-center"
+                              ><i class="mdi mdi-account fs-4"></i
+                            ></span>
+                            <div class="ms-2">
+                              <h5 class="mb-0">Pavan kumar</h5>
+                              <span class="mail-desc"
+                                >Just see the my admin!</span
+                              >
+                            </div>
+                          </div>
+                        </a>
+                        <!-- Message -->
+                        <a href="javascript:void(0)" class="link border-top">
+                          <div class="d-flex no-block align-items-center p-10">
+                            <span
+                              class="btn btn-danger btn-circle d-flex align-items-center justify-content-center"
+                              ><i class="mdi mdi-link fs-4"></i
+                            ></span>
+                            <div class="ms-2">
+                              <h5 class="mb-0">Luanch Admin</h5>
+                              <span class="mail-desc"
+                                >Just see the my new admin!</span
+                              >
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </li>
+                  </ul>
+                </ul>
+              </li>
+              <!-- ============================================================== -->
+              <!-- End Messages -->
+              <!-- ============================================================== -->
+
+              <!-- ============================================================== -->
+              <!-- User profile and search -->
+              <!-- ============================================================== -->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <img
+                    src="../assets/images/users/1.jpg"
+                    alt="user"
+                    class="rounded-circle"
+                    width="31"
+                  />
+                </a>
+                <ul
+                  class="dropdown-menu dropdown-menu-end user-dd animated"
+                  aria-labelledby="navbarDropdown"
+                >
+                  <a class="dropdown-item" href="javascript:void(0)"
+                    ><i class="mdi mdi-account me-1 ms-1"></i> My Profile</a
+                  >
+                  <a class="dropdown-item" href="javascript:void(0)"
+                    ><i class="mdi mdi-wallet me-1 ms-1"></i> My Balance</a
+                  >
+                  <a class="dropdown-item" href="javascript:void(0)"
+                    ><i class="mdi mdi-email me-1 ms-1"></i> Inbox</a
+                  >
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="javascript:void(0)"
+                    ><i class="mdi mdi-settings me-1 ms-1"></i> Account
+                    Setting</a
+                  >
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="javascript:void(0)"
+                    ><i class="fa fa-power-off me-1 ms-1"></i> Logout</a
+                  >
+                  <div class="dropdown-divider"></div>
+                  <div class="ps-4 p-10">
+                    <a
+                      href="javascript:void(0)"
+                      class="btn btn-sm btn-success btn-rounded text-white"
+                      >View Profile</a
+                    >
+                  </div>
+                </ul>
+              </li>
+              <!-- ============================================================== -->
+              <!-- User profile and search -->
+              <!-- ============================================================== -->
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <!-- ============================================================== -->
+      <!-- End Topbar header -->
+      <!-- ============================================================== -->
+      <!-- ============================================================== -->
+      <!-- Left Sidebar - style you can find in sidebar.scss  -->
+      <!-- ============================================================== -->
+      <aside class="left-sidebar" data-sidebarbg="skin5">
+        <!-- Sidebar scroll-->
+        <div class="scroll-sidebar">
+          <!-- Sidebar navigation-->
+          <nav class="sidebar-nav">
+            <ul id="sidebarnav" class="pt-4">
+              <li class="sidebar-item">
+                <a
+                  class="sidebar-link waves-effect waves-dark sidebar-link"
+                  href="index.html"
+                  aria-expanded="false"
+                >
+                  <i class="mdi mdi-view-dashboard"></i>
+                  <span class="hide-menu">Dashboard</span>
+                </a>
+              </li>
+              <li class="sidebar-item">
+                <a
+                  class="sidebar-link waves-effect waves-dark sidebar-link"
+                  href="customers.html"
+                  aria-expanded="false"
+                >
+                  <i class="mdi mdi-account"></i>
+                  <span class="hide-menu">Customers</span>
+                </a>
+              </li>
+              <li class="sidebar-item">
+                <a
+                  class="sidebar-link waves-effect waves-dark sidebar-link"
+                  href="services.html"
+                  aria-expanded="false"
+                >
+                  <i class="mdi mdi-format-align-justify"></i>
+                  <span class="hide-menu">Services</span>
+                </a>
+              </li>
+              <li class="sidebar-item">
+                <a
+                  class="sidebar-link waves-effect waves-dark sidebar-link"
+                  href="photographers.html"
+                  aria-expanded="false"
+                >
+                  <i class="fas fa-address-book"></i>
+                  <span class="hide-menu">Photographers</span>
+                </a>
+              </li>
+              <li class="sidebar-item">
+                <a
+                  class="sidebar-link waves-effect waves-dark sidebar-link"
+                  href="reservations.html"
+                  aria-expanded="false"
+                >
+                  <i class="fas fa-calendar-alt"></i>
+                  <span class="hide-menu">Reservations</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <!-- End Sidebar navigation -->
+        </div>
+        <!-- End Sidebar scroll-->
+      </aside>
+      <!-- ============================================================== -->
+      <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+      <!-- ============================================================== -->
+      <!-- ============================================================== -->
+      <!-- Page wrapper  -->
+      <!-- ============================================================== -->
+      <div class="page-wrapper">
+        <!-- ============================================================== -->
+        <!-- Bread crumb and right sidebar toggle -->
+        <!-- ============================================================== -->
+        <div class="page-breadcrumb">
+          <div class="row">
+            <div class="col-12 d-flex no-block align-items-center">
+              <h4 class="page-title">Customer Detail</h4>
+              <div class="ms-auto text-end">
+                <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item">Services</li>
+                    <li class="breadcrumb-item active" aria-current="page">
+                      Wedding
+                    </li>
+                  </ol>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Bread crumb and right sidebar toggle -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Container fluid  -->
+        <!-- ============================================================== -->
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="card">
+                <form class="form-horizontal">
+                  <div class="card-body">
+                    <h4 class="card-title">Wedding</h4>
+                    <div class="form-group row">
+                      <label
+                        for="fname"
+                        class="col-sm-3 text-end control-label col-form-label"
+                      >
+                        Thumbnails
+                      </label>
+                      <div class="col-sm-9">
+                        <input
+                          type="file"
+                          class="form-control"
+                          id="avatar"
+                          multiple
+                        />
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label
+                        for="fname"
+                        class="col-sm-3 text-end control-label col-form-label"
+                      >
+                        Id
+                      </label>
+                      <div class="col-sm-9">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="fname"
+                          placeholder="First Name Here"
+                          value="283799F6-3DCC-1488-AADA-A32E11840BAC"
+                          disabled
+                        />
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label
+                        for="serviceName"
+                        class="col-sm-3 text-end control-label col-form-label"
+                      >
+                        Service Name
+                      </label>
+                      <div class="col-sm-9">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="serviceName"
+                          placeholder="First Name Here"
+                          value="Wedding"
+                        />
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label
+                        for="price"
+                        class="col-sm-3 text-end control-label col-form-label"
+                      >
+                        Price
+                      </label>
+                      <div class="col-sm-9">
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1">
+                              $
+                            </span>
+                          </div>
+                          <input
+                            type="number"
+                            class="form-control"
+                            placeholder="Price per unit"
+                            aria-describedby="basic-addon1"
+                            value="599.00"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <!-- ===================================================================================
+                           =                                Photographers                                     =
+                           ===================================================================================
+                      -->
+                      <label
+                        for="photographer"
+                        class="col-sm-3 text-end control-label col-form-label"
+                      >
+                        Photographer
+                      </label>
+                      <div class="col-sm-9">
+                        <select
+                          class="form-select"
+                          aria-label="Default select example"
+                          id="photographer"
+                        >
+                          <option disabled>
+                            Choose a photographer
+                          </option>
+                          <option value="0" selected >Bevis Bernard</option>
+                          <option value="1">Kamal Mcgee</option>
+                          <option value="2">Preston Buckley</option>
+                          <option value="3">Orlando Poole</option>
+                          <option value="4">Justina King</option>
+                          <option value="5">Cynthia Joseph</option>
+                          <option value="6">Steel Sawyer</option>
+                          <option value="7">Sawyer Berg</option>
+                          <option value="8">Heather Sweet</option>
+                          <option value="9">Kimberley Ryan</option>
+                          <option value="10">Randall Aguirre</option>
+                          <option value="11">Genevieve Flynn</option>
+                          <option value="12">Paula Wise</option>
+                          <option value="13">Pandora Downs</option>
+                          <option value="14">Chase Long</option>
+                          <option value="15">Olga Farrell</option>
+                          <option value="16">Preston Cohen</option>
+                          <option value="17">Salvador Gallagher</option>
+                          <option value="18">Noel Dodson</option>
+                          <option value="19">Ulysses Kent</option>
+                          <option value="20">Elton Richard</option>
+                          <option value="21">Chastity Flynn</option>
+                          <option value="22">Emi Cardenas</option>
+                          <option value="23">Hashim Hensley</option>
+                          <option value="24">Lana Lamb</option>
+                          <option value="25">Tatyana Frederick</option>
+                          <option value="26">Myles Adkins</option>
+                          <option value="27">Gavin Chambers</option>
+                          <option value="28">Daquan Patton</option>
+                          <option value="29">Abdul Farmer</option>
+                          <option value="30">Laura Chapman</option>
+                          <option value="31">Holly Puckett</option>
+                          <option value="32">Brynn Barton</option>
+                          <option value="33">Susan Little</option>
+                          <option value="34">Alfreda Kaufman</option>
+                          <option value="35">Oleg Wise</option>
+                          <option value="36">Megan Mooney</option>
+                          <option value="37">Aurelia Bell</option>
+                          <option value="38">Duncan Odom</option>
+                          <option value="39">Mira Melendez</option>
+                          <option value="40">Colin Delacruz</option>
+                          <option value="41">Beatrice Hendrix</option>
+                          <option value="42">Chastity Foley</option>
+                          <option value="43">Olga Andrews</option>
+                          <option value="44">Otto Barnes</option>
+                          <option value="45">Galena Burch</option>
+                          <option value="46">Ignatius Washington</option>
+                          <option value="47">Kadeem Key</option>
+                          <option value="48">Paul Norton</option>
+                          <option value="49">Dalton Boyle</option>
+                          <option value="50">Melyssa Lindsay</option>
+                          <option value="51">Britanni Talley</option>
+                          <option value="52">Orson Mcleod</option>
+                          <option value="53">Adele Jacobson</option>
+                          <option value="54">Finn Montgomery</option>
+                          <option value="55">Abraham Roman</option>
+                          <option value="56">Michael Alston</option>
+                          <option value="57">Kaseem Barrett</option>
+                          <option value="58">Vance Burch</option>
+                          <option value="59">Olga Snider</option>
+                          <option value="60">Mira Fields</option>
+                          <option value="61">Wyoming Willis</option>
+                          <option value="62">Marvin Carr</option>
+                          <option value="63">May Allison</option>
+                          <option value="64">Nehru Bartlett</option>
+                          <option value="65">Jonas Roth</option>
+                          <option value="66">Kelsie Medina</option>
+                          <option value="67">Jameson Cochran</option>
+                          <option value="68">Breanna Shepard</option>
+                          <option value="69">Kristen Lowery</option>
+                          <option value="70">Dennis Christensen</option>
+                          <option value="71">Hakeem Hampton</option>
+                          <option value="72">Melvin Bowen</option>
+                          <option value="73">Sopoline Rosario</option>
+                          <option value="74">Oscar Jones</option>
+                          <option value="75">Sopoline Powers</option>
+                          <option value="76">Gabriel Lambert</option>
+                          <option value="77">Hilel Bartlett</option>
+                          <option value="78">Felicia Clarke</option>
+                          <option value="79">Garrett Blake</option>
+                          <option value="80">Hashim Ramirez</option>
+                          <option value="81">Erasmus Sheppard</option>
+                          <option value="82">Uriel Mathews</option>
+                          <option value="83">Conan Bailey</option>
+                          <option value="84">Palmer Frost</option>
+                          <option value="85">Byron Schultz</option>
+                          <option value="86">Oliver Gray</option>
+                          <option value="87">Curran Everett</option>
+                          <option value="88">Leroy Reese</option>
+                          <option value="89">Mia Stephenson</option>
+                          <option value="90">Tanisha Koch</option>
+                          <option value="91">Xander James</option>
+                          <option value="92">Quinlan Vang</option>
+                          <option value="93">Gil Wells</option>
+                          <option value="94">Sharon Short</option>
+                          <option value="95">Sydney Huber</option>
+                          <option value="96">Rowan White</option>
+                          <option value="97">Tyrone Holloway</option>
+                          <option value="98">Dai Rosario</option>
+                          <option value="99">Jason Mckinney</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="border-top">
+                    <div class="card-body">
+                      <button type="button" class="btn btn-primary">
+                        Save changes
+                      </button>
+                      <button type="button" class="btn btn-danger">
+                        Cancel
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Container fluid  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- footer -->
+        <!-- ============================================================== -->
+        <footer class="footer text-center">
+          All Rights Reserved by Matrix-admin. Designed and Developed by
+          <a href="https://www.wrappixel.com">WrapPixel</a>.
+        </footer>
+        <!-- ============================================================== -->
+        <!-- End footer -->
+        <!-- ============================================================== -->
+      </div>
+      <!-- ============================================================== -->
+      <!-- End Page wrapper  -->
+      <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
+    <script src="../assets/extra-libs/sparkline/sparkline.js"></script>
+    <!--Wave Effects -->
+    <script src="../dist/js/waves.js"></script>
+    <!--Menu sidebar -->
+    <script src="../dist/js/sidebarmenu.js"></script>
+    <!--Custom JavaScript -->
+    <script src="../dist/js/custom.min.js"></script>
+    <!--This page JavaScript -->
+    <!-- <script src="../dist/js/pages/dashboards/dashboard1.js"></script> -->
+    <!-- Charts js Files -->
+    <script src="../assets/libs/flot/excanvas.js"></script>
+    <script src="../assets/libs/flot/jquery.flot.js"></script>
+    <script src="../assets/libs/flot/jquery.flot.pie.js"></script>
+    <script src="../assets/libs/flot/jquery.flot.time.js"></script>
+    <script src="../assets/libs/flot/jquery.flot.stack.js"></script>
+    <script src="../assets/libs/flot/jquery.flot.crosshair.js"></script>
+    <script src="../assets/libs/flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
+    <script src="../dist/js/pages/chart/chart-page-init.js"></script>
+  </body>
+</html>
