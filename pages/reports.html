@@ -23,8 +23,15 @@
       href="../assets/images/favicon.png"
     />
     <!-- Custom CSS -->
-    <link href="../assets/libs/flot/css/float-chart.css" rel="stylesheet" />
-    <!-- Custom CSS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../assets/extra-libs/multicheck/multicheck.css"
+    />
+    <link
+      href="../assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.css"
+      rel="stylesheet"
+    />
     <link href="../dist/css/style.min.css" rel="stylesheet" />
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -129,7 +136,6 @@
                   ><i class="mdi mdi-menu font-24"></i
                 ></a>
               </li>
-
               <!-- ============================================================== -->
               <!-- Search -->
               <!-- ============================================================== -->
@@ -344,30 +350,27 @@
                   class="sidebar-link waves-effect waves-dark sidebar-link"
                   href="index.html"
                   aria-expanded="false"
+                  ><i class="mdi mdi-view-dashboard"></i
+                  ><span class="hide-menu">Dashboard</span></a
                 >
-                  <i class="mdi mdi-view-dashboard"></i>
-                  <span class="hide-menu">Dashboard</span>
-                </a>
               </li>
               <li class="sidebar-item">
                 <a
                   class="sidebar-link waves-effect waves-dark sidebar-link"
                   href="customers.html"
                   aria-expanded="false"
+                  ><i class="mdi mdi-account"></i
+                  ><span class="hide-menu">Customers</span></a
                 >
-                  <i class="mdi mdi-account"></i>
-                  <span class="hide-menu">Customers</span>
-                </a>
               </li>
               <li class="sidebar-item">
                 <a
                   class="sidebar-link waves-effect waves-dark sidebar-link"
                   href="services.html"
                   aria-expanded="false"
+                  ><i class="mdi mdi-format-align-justify"></i
+                  ><span class="hide-menu">Services</span></a
                 >
-                  <i class="mdi mdi-format-align-justify"></i>
-                  <span class="hide-menu">Services</span>
-                </a>
               </li>
               <li class="sidebar-item">
                 <a
@@ -418,16 +421,14 @@
         <div class="page-breadcrumb">
           <div class="row">
             <div class="col-12 d-flex no-block align-items-center">
-              <h4 class="page-title">Reservation Detail</h4>
+              <h4 class="page-title">Services</h4>
               <div class="ms-auto text-end">
                 <nav aria-label="breadcrumb">
-                  <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item">Reservations</li>
-                    <li class="breadcrumb-item active" aria-current="page">
-                      D668AD31-5ACC-8CE3-9C0B-4B39F549D275
+                  <ul class="nav">
+                    <li class="nav-item">
+                      <!-- <a href="#" class="btn btn-primary">Add service</a> -->
                     </li>
-                  </ol>
+                  </ul>
                 </nav>
               </div>
             </div>
@@ -440,348 +441,186 @@
         <!-- Container fluid  -->
         <!-- ============================================================== -->
         <div class="container-fluid">
+          <!-- ============================================================== -->
+          <!-- Start Page Content -->
+          <!-- ============================================================== -->
           <div class="row">
             <div class="col-12">
               <div class="card">
-                <form class="form-horizontal">
-                  <div class="card-body">
-                    <h4 class="card-title"></h4>
-                    <div class="form-group row">
-                      <label
-                        for="fname"
-                        class="col-sm-3 text-end control-label col-form-label"
-                      >
-                        Id
-                      </label>
-                      <div class="col-sm-9">
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="fname"
-                          placeholder="First Name Here"
-                          value="D668AD31-5ACC-8CE3-9C0B-4B39F549D275"
-                          readonly
-                        />
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label
-                        for="serviceName"
-                        class="col-sm-3 text-end control-label col-form-label"
-                      >
-                        Booked at
-                      </label>
-                      <div class="col-sm-9">
-                        <div class="input-group">
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="datepicker-autoclose"
-                            placeholder="mm/dd/yyyy"
-                            value="04/16/2022"
-                            readonly
-                          />
-                          <div class="input-group-append">
-                            <span class="input-group-text h-100"
-                              ><i class="mdi mdi-calendar"></i
-                            ></span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label
-                        for="price"
-                        class="col-sm-3 text-end control-label col-form-label"
-                      >
-                        Time
-                      </label>
-                      <div class="col-sm-9">
-                        <div class="input-group">
-                          <div class="input-group-prepend">
-                            <span class="input-group-text" id="basic-addon1">
-                              <i class="mdi mdi-clock"></i>
-                            </span>
-                          </div>
-                          <input
-                            type="text"
-                            class="form-control"
-                            placeholder="Meeting time"
-                            aria-describedby="basic-addon1"
-                            value="09:00 am"
-                            readonly
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <!-- ===================================================================================
-                           =                                Photographers                                     =
-                           ===================================================================================
-                      -->
-                      <label
-                        for="photographer"
-                        class="col-sm-3 text-end control-label col-form-label"
-                      >
-                        Photographer
-                      </label>
-                      <div class="col-sm-9">
-                        <select
-                          class="form-select"
-                          aria-label="Default select example"
-                          id="photographer"
-                          disabled
-                        >
-                          <option disabled>Choose a photographer</option>
-                          <option value="0" selected>Bevis Bernard</option>
-                          <option value="1">Kamal Mcgee</option>
-                          <option value="2">Preston Buckley</option>
-                          <option value="3">Orlando Poole</option>
-                          <option value="4">Justina King</option>
-                          <option value="5">Cynthia Joseph</option>
-                          <option value="6">Steel Sawyer</option>
-                          <option value="7">Sawyer Berg</option>
-                          <option value="8">Heather Sweet</option>
-                          <option value="9">Kimberley Ryan</option>
-                          <option value="10">Randall Aguirre</option>
-                          <option value="11">Genevieve Flynn</option>
-                          <option value="12">Paula Wise</option>
-                          <option value="13">Pandora Downs</option>
-                          <option value="14">Chase Long</option>
-                          <option value="15">Olga Farrell</option>
-                          <option value="16">Preston Cohen</option>
-                          <option value="17">Salvador Gallagher</option>
-                          <option value="18">Noel Dodson</option>
-                          <option value="19">Ulysses Kent</option>
-                          <option value="20">Elton Richard</option>
-                          <option value="21">Chastity Flynn</option>
-                          <option value="22">Emi Cardenas</option>
-                          <option value="23">Hashim Hensley</option>
-                          <option value="24">Lana Lamb</option>
-                          <option value="25">Tatyana Frederick</option>
-                          <option value="26">Myles Adkins</option>
-                          <option value="27">Gavin Chambers</option>
-                          <option value="28">Daquan Patton</option>
-                          <option value="29">Abdul Farmer</option>
-                          <option value="30">Laura Chapman</option>
-                          <option value="31">Holly Puckett</option>
-                          <option value="32">Brynn Barton</option>
-                          <option value="33">Susan Little</option>
-                          <option value="34">Alfreda Kaufman</option>
-                          <option value="35">Oleg Wise</option>
-                          <option value="36">Megan Mooney</option>
-                          <option value="37">Aurelia Bell</option>
-                          <option value="38">Duncan Odom</option>
-                          <option value="39">Mira Melendez</option>
-                          <option value="40">Colin Delacruz</option>
-                          <option value="41">Beatrice Hendrix</option>
-                          <option value="42">Chastity Foley</option>
-                          <option value="43">Olga Andrews</option>
-                          <option value="44">Otto Barnes</option>
-                          <option value="45">Galena Burch</option>
-                          <option value="46">Ignatius Washington</option>
-                          <option value="47">Kadeem Key</option>
-                          <option value="48">Paul Norton</option>
-                          <option value="49">Dalton Boyle</option>
-                          <option value="50">Melyssa Lindsay</option>
-                          <option value="51">Britanni Talley</option>
-                          <option value="52">Orson Mcleod</option>
-                          <option value="53">Adele Jacobson</option>
-                          <option value="54">Finn Montgomery</option>
-                          <option value="55">Abraham Roman</option>
-                          <option value="56">Michael Alston</option>
-                          <option value="57">Kaseem Barrett</option>
-                          <option value="58">Vance Burch</option>
-                          <option value="59">Olga Snider</option>
-                          <option value="60">Mira Fields</option>
-                          <option value="61">Wyoming Willis</option>
-                          <option value="62">Marvin Carr</option>
-                          <option value="63">May Allison</option>
-                          <option value="64">Nehru Bartlett</option>
-                          <option value="65">Jonas Roth</option>
-                          <option value="66">Kelsie Medina</option>
-                          <option value="67">Jameson Cochran</option>
-                          <option value="68">Breanna Shepard</option>
-                          <option value="69">Kristen Lowery</option>
-                          <option value="70">Dennis Christensen</option>
-                          <option value="71">Hakeem Hampton</option>
-                          <option value="72">Melvin Bowen</option>
-                          <option value="73">Sopoline Rosario</option>
-                          <option value="74">Oscar Jones</option>
-                          <option value="75">Sopoline Powers</option>
-                          <option value="76">Gabriel Lambert</option>
-                          <option value="77">Hilel Bartlett</option>
-                          <option value="78">Felicia Clarke</option>
-                          <option value="79">Garrett Blake</option>
-                          <option value="80">Hashim Ramirez</option>
-                          <option value="81">Erasmus Sheppard</option>
-                          <option value="82">Uriel Mathews</option>
-                          <option value="83">Conan Bailey</option>
-                          <option value="84">Palmer Frost</option>
-                          <option value="85">Byron Schultz</option>
-                          <option value="86">Oliver Gray</option>
-                          <option value="87">Curran Everett</option>
-                          <option value="88">Leroy Reese</option>
-                          <option value="89">Mia Stephenson</option>
-                          <option value="90">Tanisha Koch</option>
-                          <option value="91">Xander James</option>
-                          <option value="92">Quinlan Vang</option>
-                          <option value="93">Gil Wells</option>
-                          <option value="94">Sharon Short</option>
-                          <option value="95">Sydney Huber</option>
-                          <option value="96">Rowan White</option>
-                          <option value="97">Tyrone Holloway</option>
-                          <option value="98">Dai Rosario</option>
-                          <option value="99">Jason Mckinney</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <!-- Customers -->
-                      <label
-                        for="photographer"
-                        class="col-sm-3 text-end control-label col-form-label"
-                      >
-                        Customer
-                      </label>
-                      <div class="col-md-9">
-                        <select
-                          class="form-select"
-                          aria-label="Default select example"
-                          id="customer"
-                          disabled
-                        >
-                          <option disabled>Choose a customer</option>
-                          <option value="0" selected>Tashya Cook</option>
-                          <option value="1">Cole Randolph</option>
-                          <option value="2">Kareem Holcomb</option>
-                          <option value="3">Beatrice Graham</option>
-                          <option value="4">Warren Guzman</option>
-                          <option value="5">Kennedy Harvey</option>
-                          <option value="6">Sydney Stanley</option>
-                          <option value="7">Uriah Franco</option>
-                          <option value="8">Solomon Mercer</option>
-                          <option value="9">Thane Sosa</option>
-                          <option value="10">Emi Glover</option>
-                          <option value="11">Raya Boyle</option>
-                          <option value="12">Imogene Kramer</option>
-                          <option value="13">Baxter Gill</option>
-                          <option value="14">Stacey Olson</option>
-                          <option value="15">Alan Jensen</option>
-                          <option value="16">Simone Bowman</option>
-                          <option value="17">Wing Mcclain</option>
-                          <option value="18">Jakeem Ashley</option>
-                          <option value="19">Ivan Vaughan</option>
-                          <option value="20">Brenda Rocha</option>
-                          <option value="21">Madeline Mckee</option>
-                          <option value="22">Julie Stokes</option>
-                          <option value="23">Joy Matthews</option>
-                          <option value="24">Amena Vasquez</option>
-                          <option value="25">Cassidy Gomez</option>
-                          <option value="26">Nomlanga Vang</option>
-                          <option value="27">September Whitney</option>
-                          <option value="28">Scott Le</option>
-                          <option value="29">Skyler Tate</option>
-                          <option value="30">Raven Herring</option>
-                          <option value="31">Carla Robinson</option>
-                          <option value="32">Karina Greene</option>
-                          <option value="33">Uriel Sheppard</option>
-                          <option value="34">Lyle Jefferson</option>
-                          <option value="35">Sean Mendoza</option>
-                          <option value="36">Rogan Foster</option>
-                          <option value="37">Colin Cooper</option>
-                          <option value="38">Omar Rogers</option>
-                          <option value="39">Jelani Howard</option>
-                          <option value="40">Carly Compton</option>
-                          <option value="41">Griffith Mcgowan</option>
-                          <option value="42">Ila Malone</option>
-                          <option value="43">Stone Travis</option>
-                          <option value="44">Hilary Hayden</option>
-                          <option value="45">Phoebe Ball</option>
-                          <option value="46">Adria Tucker</option>
-                          <option value="47">Stone Waters</option>
-                          <option value="48">Warren Bryan</option>
-                          <option value="49">Marshall Holden</option>
-                          <option value="50">Griffin Bullock</option>
-                          <option value="51">Shad Salas</option>
-                          <option value="52">Yoshio Harvey</option>
-                          <option value="53">Aurora Adkins</option>
-                          <option value="54">Sage Reid</option>
-                          <option value="55">MacKensie Newman</option>
-                          <option value="56">Hilary Gentry</option>
-                          <option value="57">Vivian Austin</option>
-                          <option value="58">Maggie Decker</option>
-                          <option value="59">Tatiana Castaneda</option>
-                          <option value="60">Isadora Bradford</option>
-                          <option value="61">Timon Dillard</option>
-                          <option value="62">Yuri Curry</option>
-                          <option value="63">Ross Duran</option>
-                          <option value="64">Lois Allen</option>
-                          <option value="65">Angelica Rojas</option>
-                          <option value="66">Melodie Gonzalez</option>
-                          <option value="67">Mohammad Terry</option>
-                          <option value="68">Charity Levine</option>
-                          <option value="69">Leah Le</option>
-                          <option value="70">Heidi Dalton</option>
-                          <option value="71">Benjamin Dale</option>
-                          <option value="72">Shad Livingston</option>
-                          <option value="73">Vielka Parks</option>
-                          <option value="74">Zenia Wolf</option>
-                          <option value="75">Evan Donaldson</option>
-                          <option value="76">Cameran Sanders</option>
-                          <option value="77">Brian Ford</option>
-                          <option value="78">Hamish Booth</option>
-                          <option value="79">Christen Blankenship</option>
-                          <option value="80">Neve Cherry</option>
-                          <option value="81">Isabella Baird</option>
-                          <option value="82">Armando Norman</option>
-                          <option value="83">Justin Travis</option>
-                          <option value="84">Lana Carter</option>
-                          <option value="85">Quail Nelson</option>
-                          <option value="86">Clio Kelly</option>
-                          <option value="87">Lev Chaney</option>
-                          <option value="88">Ryder Hurst</option>
-                          <option value="89">Lev Mcdaniel</option>
-                          <option value="90">Joseph Mason</option>
-                          <option value="91">Tate Lynch</option>
-                          <option value="92">Wing Wallace</option>
-                          <option value="93">Travis Mcconnell</option>
-                          <option value="94">Lacota Riddle</option>
-                          <option value="95">Kennedy Fitzpatrick</option>
-                          <option value="96">Kim Davenport</option>
-                          <option value="97">Clementine Logan</option>
-                          <option value="98">Belle Douglas</option>
-                          <option value="99">Jada Moreno</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <!-- Customers -->
-                      <label
-                        for="photographer"
-                        class="col-sm-3 text-end control-label col-form-label"
-                      >
-                        Status
-                      </label>
-                      <div class="col-sm-9">
-                        <span class="badge bg-primary">Completed</span>
-                      </div>
-                    </div>
+                <div class="card-body">
+                  <h5 class="card-title"></h5>
+                  <div class="table-responsive">
+                    <table
+                      id="zero_config"
+                      class="table table-striped table-bordered"
+                    >
+                      <thead>
+                        <tr>
+                          <th>Reporter</th>
+                          <th>Defendant</th>
+                          <th>Reason</th>
+                          <th>Evidence</th>
+                          <th>Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Miriam Hines</td>
+                          <td>Ashton Cox</td>
+                          <td>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing
+                            elit. Odio voluptate aspernatur qui reiciendis vel
+                            fugit porro inventore dolor, ipsa tenetur commodi
+                            voluptates ab? Quibusdam architecto tempore,
+                            assumenda magnam maxime itaque!
+                          </td>
+                          <td>
+                            <img
+                              class="img-thumbnail"
+                              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfnFYDth52APmXxSpm91IncQISXXAkga3meg&usqp=CAU"
+                              alt="Report source"
+                            />
+                          </td>
+                          <td>
+                            <!-- Button trigger modal -->
+                            <button
+                              type="button"
+                              class="btn btn-primary"
+                              data-bs-toggle="modal"
+                              data-bs-target="#exampleModal"
+                            >
+                              View
+                            </button>
+
+                            <!-- Modal -->
+                            <div
+                              class="modal fade"
+                              id="exampleModal"
+                              tabindex="-1"
+                              aria-labelledby="exampleModalLabel"
+                              aria-hidden="true"
+                            >
+                              <div class="modal-dialog">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <h5
+                                      class="modal-title"
+                                      id="exampleModalLabel"
+                                    >
+                                      Report detail
+                                    </h5>
+                                    <button
+                                      type="button"
+                                      class="btn-close"
+                                      data-bs-dismiss="modal"
+                                      aria-label="Close"
+                                    ></button>
+                                  </div>
+                                  <div class="modal-body">
+                                    <form class="form-horizontal">
+                                      <div class="card-body">
+                                        <h4 class="card-title"></h4>
+                                        <div class="form-group row">
+                                          <label
+                                            for="reporter"
+                                            class="col-sm-3 text-end control-label col-form-label"
+                                          >
+                                            Report
+                                          </label>
+                                          <div class="col-sm-9">
+                                            <input
+                                              type="text"
+                                              class="form-control"
+                                              id="reporter"
+                                              value="Miriam Hines"
+                                              disabled
+                                            />
+                                          </div>
+                                        </div>
+                                        <div class="form-group row">
+                                          <label
+                                            for="defendant"
+                                            class="col-sm-3 text-end control-label col-form-label"
+                                          >
+                                            Defendant
+                                          </label>
+                                          <div class="col-sm-9">
+                                            <input
+                                              type="text"
+                                              class="form-control"
+                                              id="defendant"
+                                              value="Ashton Cox"
+                                              disabled
+                                            />
+                                          </div>
+                                        </div>
+                                        <div class="form-group row">
+                                          <label
+                                            for="lname"
+                                            class="col-sm-3 text-end control-label col-form-label"
+                                          >
+                                            Evidence
+                                          </label>
+                                          <div class="col-sm-9">
+                                            <img
+                                              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfnFYDth52APmXxSpm91IncQISXXAkga3meg&usqp=CAU"
+                                              alt="Evidence"
+                                            />
+                                          </div>
+                                        </div>
+                                        <div class="form-group row">
+                                          <label
+                                            for="email1"
+                                            class="col-sm-3 text-end control-label col-form-label"
+                                          >
+                                            Reason
+                                          </label>
+                                          <div class="col-sm-9">
+                                            <textarea
+                                              disabled
+                                              class="form-control"
+                                              rows="10">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio voluptate aspernatur qui reiciendis vel fugit porro inventore dolor, ipsa tenetur commodi voluptates ab? Quibusdam architecto tempore, assumenda magnam maxime itaque!
+                                            </textarea>
+                                          </div>
+                                        </div>
+                                        <div class="form-group row">
+                                          <button class="col-12 col-md-4 btn btn-primary">Approve</button>
+                                          <button class="offset-md-4 col-12 col-md-4 btn btn-danger">Reject</button>
+                                        </div>
+                                      </div>
+                                    </form>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                      <tfoot>
+                        <tr>
+                          <th>Reporter</th>
+                          <th>Defendant</th>
+                          <th>Reason</th>
+                          <th>Evidence</th>
+                          <th>Action</th>
+                        </tr>
+                      </tfoot>
+                    </table>
                   </div>
-                  <div class="border-top">
-                    <div class="card-body">
-                      <button type="button" class="btn btn-primary">
-                        Save changes
-                      </button>
-                      <button type="button" class="btn btn-danger">
-                        Cancel
-                      </button>
-                    </div>
-                  </div>
-                </form>
+                </div>
               </div>
             </div>
           </div>
+          <!-- ============================================================== -->
+          <!-- End PAge Content -->
+          <!-- ============================================================== -->
+          <!-- ============================================================== -->
+          <!-- Right sidebar -->
+          <!-- ============================================================== -->
+          <!-- .right-sidebar -->
+          <!-- ============================================================== -->
+          <!-- End Right sidebar -->
+          <!-- ============================================================== -->
         </div>
         <!-- ============================================================== -->
         <!-- End Container fluid  -->
@@ -810,31 +649,6 @@
     <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap tether Core JavaScript -->
     <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
-    <script src="../assets/extra-libs/sparkline/sparkline.js"></script>
-    <!--Wave Effects -->
-    <script src="../dist/js/waves.js"></script>
-    <!--Menu sidebar -->
-    <script src="../dist/js/sidebarmenu.js"></script>
-    <!--Custom JavaScript -->
-    <script src="../dist/js/custom.min.js"></script>
-    <!--This page JavaScript -->
-    <script src="../dist/js/pages/dashboards/dashboard1.js"></script>
-    <!-- Charts js Files -->
-    <!-- <script src="../assets/libs/flot/excanvas.js"></script>
-    <script src="../assets/libs/flot/jquery.flot.js"></script>
-    <script src="../assets/libs/flot/jquery.flot.pie.js"></script>
-    <script src="../assets/libs/flot/jquery.flot.time.js"></script>
-    <script src="../assets/libs/flot/jquery.flot.stack.js"></script>
-    <script src="../assets/libs/flot/jquery.flot.crosshair.js"></script>
-    <script src="../assets/libs/flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
-    <script src="../dist/js/pages/chart/chart-page-init.js"></script> -->
-    <!-- ============================================================== -->
-    <!-- All Jquery -->
-    <!-- ============================================================== -->
-    <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
-    <!-- Bootstrap tether Core JavaScript -->
-    <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <!-- slimscrollbar scrollbar JavaScript -->
     <script src="../assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
     <script src="../assets/extra-libs/sparkline/sparkline.js"></script>
@@ -847,16 +661,19 @@
     <!-- this page js -->
     <script src="../assets/extra-libs/multicheck/datatable-checkbox-init.js"></script>
     <script src="../assets/extra-libs/multicheck/jquery.multicheck.js"></script>
-    <script src="../assets/libs/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
     <script src="../assets/extra-libs/DataTables/datatables.min.js"></script>
     <script>
       /****************************************
        *       Basic Table                   *
        ****************************************/
-      $('#zero_config').DataTable();
-      jQuery('#datepicker-autoclose').datepicker({
-        autoclose: true,
-        todayHighlight: true,
+      $('#zero_config').DataTable({
+        columns: [
+          { width: '15%' },
+          { width: '15%' },
+          { width: '20%' },
+          { width: '20%' },
+          { width: '20%' },
+        ],
       });
     </script>
   </body>
